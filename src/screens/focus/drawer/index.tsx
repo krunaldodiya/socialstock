@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, Text, ImageBackground, Image } from 'react-native';
+import { View, Text, ImageBackground, Image } from 'react-native';
 import { styles } from './style';
 import { images } from '../../../../src/libs/images';
 

@@ -6,23 +6,37 @@ export const images = {
 	back5: require('../../assets/images/back5.png'),
 	back6: require('../../assets/images/back6.png'),
 	box: require('../../assets/images/box.png'),
+
 	calendar: require('../../assets/images/calendar.png'),
+	camera: require('../../assets/images/camera.png'),
 	call: require('../../assets/images/call.png'),
 	chart: require('../../assets/images/chart.png'),
 	clock1: require('../../assets/images/clock1.png'),
 	clock2: require('../../assets/images/clock2.png'),
     clock3: require('../../assets/images/clock3.png'),
-    close: require('../../assets/images/close.png'),
+	close: require('../../assets/images/close.png'),
+	
 	edit: require('../../assets/images/edit.png'),
 	edit_remove: require('../../assets/images/edit_remove.png'),
 	envelope: require('../../assets/images/envelope.png'),
 	facebook: require('../../assets/images/facebook.png'),
 	femenine: require('../../assets/images/femenine.png'),
+	follow: require('../../assets/images/follow.png'),
 	girl: require('../../assets/images/girl.png'),
 	gear: require('../../assets/images/gear.png'),
 	google: require('../../assets/images/google.png'),
 	home: require('../../assets/images/home.png'),
 	india: require('../../assets/images/india.png'),
+
+	interest_animals: require('../../assets/images/animals.png'),
+	interest_arts: require('../../assets/images/arts.png'),
+	interest_automobile: require('../../assets/images/automobile.png'),
+	interest_food: require('../../assets/images/food.png'),
+	interest_fashion: require('../../assets/images/fashion.png'),
+	interest_nature: require('../../assets/images/nature.png'),
+	interest_technology: require('../../assets/images/technology.png'),
+	interest_traveling: require('../../assets/images/traveling.png'),
+
 	locatePlace: require('../../assets/images/locate-place.png'),
 	logo: require('../../assets/images/logo.png'),
 	logout: require('../../assets/images/logout.png'),
@@ -40,5 +54,7 @@ export const images = {
 	trophy3: require('../../assets/images/trophy3.png'),
 	twitter: require('../../assets/images/twitter.png'),
 	us: require('../../assets/images/united-states.png'),
-	world: require('../../assets/images/world.png')
+	world: require('../../assets/images/world.png'),
+
+
 };
