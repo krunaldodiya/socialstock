@@ -3,8 +3,8 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {Login} from '../screens/auth/Login';
 import {Register} from '../screens/auth/Register';
 import {RequestOtp} from '../screens/auth/RequestOtp';
-import {SelectCountry} from '../screens/auth/SelectCountry';
-import {SelectLanguage} from '../screens/auth/SelectLanguage';
+import SelectCountry from '../screens/auth/SelectCountry';
+import SelectLanguage from '../screens/auth/SelectLanguage';
 import {VerifyOtp} from '../screens/auth/VerifyOtp';
 import {Home} from '../screens/Home';
 

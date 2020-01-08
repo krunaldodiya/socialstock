@@ -15,5 +15,6 @@ export default {
     Digital7Mono: 'Digital7-Mono',
     Digital7Italic: 'Digital7-Italic',
     Digital7MonoItalic: 'Digital7-MonoItalic',
+    Aileron: 'Aileron'
   },
 };
