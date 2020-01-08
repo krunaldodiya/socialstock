@@ -3,11 +3,11 @@ import { SafeAreaView, View, Text, Image, TextInput, TouchableOpacity } from 're
 import { styles } from './style';
 import { images } from '../../../libs/images';
 import LinearGradient from 'react-native-linear-gradient';
-import { useNavigation, useNavigationParam } from 'react-navigation-hooks';
+import { useNavigation } from 'react-navigation-hooks';
 
 export const Login = () => {
 	const { navigate } = useNavigation();
-	const [ value, onChangeText ] = React.useState('Useless Placeholder');
+	const [ value, onChangeText ] = React.useState('');
 	return (
 		<SafeAreaView style={styles.container}>
 			<Image source={images.back3} style={styles.backImg} />
@@ -34,6 +34,16 @@ export const Login = () => {
 					/>
 					<Image source={images.lock} style={styles.inputImg} />
 				</View>
+				<TouchableOpacity style={{ marginTop: 20}}>
+					<LinearGradient
+						start={{ x: 0, y: 0 }}
+						end={{ x: 1, y: 0 }}
+						colors={[ '#55c9f2', '#3082ed' ]}
+						style={styles.linearGradient}
+					>
+						<Text style={styles.buttonText}>SIGN IN</Text>
+					</LinearGradient>
+				</TouchableOpacity>
 				<TouchableOpacity
 					onPress={() => {
 						navigate('Register');
@@ -45,14 +55,10 @@ export const Login = () => {
 						colors={[ '#55c9f2', '#3082ed' ]}
 						style={styles.linearGradient}
 					>
-						<Text style={styles.buttonText}>SIGN IN</Text>
+						<Text style={styles.buttonText}>SIGN UP</Text>
 					</LinearGradient>
 				</TouchableOpacity>
-				<View style={styles.iconView}>
-					<Image source={images.facebook} style={styles.iconImg} />
-					<Image source={images.twitter} style={styles.iconImg} />
-					<Image source={images.google} style={styles.iconImg} />
-				</View>
+				
 			</View>
 		</SafeAreaView>
 	);

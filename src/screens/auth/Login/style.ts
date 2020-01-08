@@ -16,8 +16,9 @@ export const styles = StyleSheet.create({
         height: WINDOW_WIDTH/1.16,
     },
     logoImg: {
-        width: 90,
-        height: 90,
+        width: 110,
+        height: 110,
+        marginTop: 70,
         shadowColor: 'rgba(0, 0, 0, 0.27)',
         shadowOffset: { width: 3, height: 0 },
         shadowRadius: 6,
@@ -30,7 +31,7 @@ export const styles = StyleSheet.create({
         left:16
     },
     logoText: {
-        marginTop: 36,
+        marginTop: 20,
         fontFamily: "Aileron",
         fontSize: 30,
         fontWeight: "700",
@@ -42,7 +43,7 @@ export const styles = StyleSheet.create({
     textInput: {
         width: WINDOW_WIDTH-70,
         height: 50,
-        marginTop: 30,
+        marginTop: 20,
         shadowColor: 'rgba(0, 0, 0, 0.14)',
         shadowOffset: { width: 3, height: 0 },
         shadowRadius: 13,
@@ -58,7 +59,7 @@ export const styles = StyleSheet.create({
     linearGradient: {
         width: 161,
         height: 45,
-        marginTop: 46,
+        marginTop: 20,
         borderRadius: 30,
         justifyContent: 'center',
         alignItems: 'center'

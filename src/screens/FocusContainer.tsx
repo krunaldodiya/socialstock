@@ -1,4 +1,5 @@
 import React from "react";
+import { Dimensions } from 'react-native';
 import { Icon } from "react-native-elements";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createStackNavigator } from "react-navigation-stack";
@@ -7,6 +8,8 @@ import { Drawer } from "./focus/drawer";
 import { Groups } from "./focus/tabs/groups";
 import { Scoreboard } from "./focus/tabs/scoreboard";
 import { Timer } from "./focus/tabs/timer";
+
+const WINDOW_WIDTH = Dimensions.get('window').width;
 
 const FocusTabNavigator = createBottomTabNavigator(
   {
@@ -102,6 +105,7 @@ export const FocusContainer = createDrawerNavigator(
     Main: FocusStackNavigator
   },
   {
-    contentComponent: Drawer
+    contentComponent: Drawer,
+    drawerWidth: WINDOW_WIDTH * 0.8,
   }
 );

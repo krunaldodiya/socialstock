@@ -25,8 +25,10 @@ import get_auth_user from '../../../graphql/types/queries/get_auth_user';
 import get_languages from '../../../graphql/types/queries/get_languages';
 import screens from '../../../libs/screens';
 import {styles} from './style';
+import { useNavigation } from 'react-navigation-hooks';
 
 const SelectLanguage = (props: any) => {
+  const { navigate } = useNavigation();
   const [selectedLanguage, setSelectedLanguage] = useState();
 
   const {data: authUser} = useQuery<GetAuthUser, {}>(get_auth_user);
@@ -46,6 +48,7 @@ const SelectLanguage = (props: any) => {
   const [setInitialScreen] = useMutation(SET_INITIAL_SCREEN);
 
   const setLanguage = async () => {
+    navigate('Home');
     try {
       await editProfile({
         variables: {

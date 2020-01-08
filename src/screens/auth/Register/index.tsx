@@ -3,9 +3,11 @@ import { SafeAreaView, View, Text, Image, TextInput, TouchableOpacity } from 're
 import { styles } from './style';
 import { images } from '../../../libs/images';
 import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from 'react-navigation-hooks';
 
 export const Register = () => {
-	const [ value, onChangeText ] = React.useState('Useless Placeholder');
+	const { navigate } = useNavigation();
+	const [ value, onChangeText ] = React.useState('');
 	return (
 		<SafeAreaView style={styles.container}>
 			<Image source={images.back3} style={styles.backImg} />
@@ -17,10 +19,20 @@ export const Register = () => {
 						style={styles.textInput}
 						onChangeText={(text) => onChangeText(text)}
 						value={value}
-						placeholder={'Username'}
+						placeholder={'Fullname'}
 						placeholderTextColor={'#cecece'}
 					/>
 					<Image source={images.manUser} style={styles.inputImg} />
+				</View>
+				<View style={styles.inputView}>
+					<TextInput
+						style={styles.textInput}
+						onChangeText={(text) => onChangeText(text)}
+						value={value}
+						placeholder={'Email ID'}
+						placeholderTextColor={'#cecece'}
+					/>
+					<Image source={images.envelope} style={styles.inputImg} />
 				</View>
 				<View style={styles.inputView}>
 					<TextInput
@@ -32,27 +44,19 @@ export const Register = () => {
 					/>
 					<Image source={images.lock} style={styles.inputImg} />
 				</View>
-        <View style={styles.inputView}>
+				<View style={styles.inputView}>
 					<TextInput
 						style={styles.textInput}
 						onChangeText={(text) => onChangeText(text)}
 						value={value}
-						placeholder={'Password'}
+						placeholder={'Mobile Number'}
 						placeholderTextColor={'#cecece'}
 					/>
-					<Image source={images.lock} style={styles.inputImg} />
+					<Image source={images.call} style={styles.inputImg} />
 				</View>
-        <View style={styles.inputView}>
-					<TextInput
-						style={styles.textInput}
-						onChangeText={(text) => onChangeText(text)}
-						value={value}
-						placeholder={'Password'}
-						placeholderTextColor={'#cecece'}
-					/>
-					<Image source={images.lock} style={styles.inputImg} />
-				</View>
-				<TouchableOpacity>
+				<TouchableOpacity onPress={() => {
+						navigate('RequestOtp');
+					}}>
 					<LinearGradient
 						start={{ x: 0, y: 0 }}
 						end={{ x: 1, y: 0 }}

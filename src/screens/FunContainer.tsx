@@ -113,9 +113,10 @@ export const FunContainer = createStackNavigator(
     cardStyle: { flex: 1 },
     defaultNavigationOptions: ({ navigation }) => {
       return {
-        headerLeft: <HeaderLeft navigation={navigation} />,
-        title: navigation.state.routes[navigation.state.index].routeName,
-        headerRight: <HeaderRight navigation={navigation} />
+        header: null
+        // headerLeft: <HeaderLeft navigation={navigation} />,
+        // title: navigation.state.routes[navigation.state.index].routeName,
+        // headerRight: <HeaderRight navigation={navigation} />
       };
     }
   }
