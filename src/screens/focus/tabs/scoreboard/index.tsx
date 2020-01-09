@@ -6,7 +6,6 @@ import { styles } from './style';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { images } from '../../../../../src/libs/images';
 import BarChart from '../../../../../src/components/bar-chart/bar-chart';
-import { _chartConfig } from '../../../../../src/components/bar-chart/data';
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
@@ -17,6 +16,14 @@ const data = {
       data: [26, 19, 31, 16, 18, 22, 12, 18]
     }
   ]
+};
+
+const _chartConfig = {
+  backgroundGradientFrom: '#FFFFFF',
+  backgroundGradientTo: '#FFFFFF',
+  decimalPlaces: 0,
+  paddingLeft: 0,
+  color: () => `#111`,
 };
 
 export const Scoreboard = () => {

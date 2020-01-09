@@ -26,6 +26,7 @@ export const images = {
 	follow: require('../../assets/images/follow.png'),
 	girl: require('../../assets/images/girl.png'),
 	gear: require('../../assets/images/gear.png'),
+	goback: require('../../assets/images/goback.png'),
 	gold: require('../../assets/images/gold.png'),
 	google: require('../../assets/images/google.png'),
 	home: require('../../assets/images/home.png'),

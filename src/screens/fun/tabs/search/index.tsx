@@ -31,6 +31,7 @@ export const Search = () => {
 						<Text style={styles.noticeText}>Explore your interests</Text>
 					</View>
 				</View>
+				
 				<View style={styles.search}>
 					<BoxComponent title={'Fashion'} img={images.interest_fashion} colors={[ '#f857a6', '#ff5858' ]} />
 					<BoxComponent

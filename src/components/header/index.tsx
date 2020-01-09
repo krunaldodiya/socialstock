@@ -15,6 +15,7 @@ export const Header = (props: any) => {
 			>
 				{props.camera && <Image source={images.camera} style={styles.icon} />}
 				{props.menu && <Image source={images.menu} style={styles.icon} />}
+				{props.goback && <Image source={images.goback} style={[styles.icon, { height: 16}]} />}
 
 				<Text style={styles.headerText}>{props.title}</Text>
 				{props.profile && <Image source={images.man} style={styles.avatar} />}
