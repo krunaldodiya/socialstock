@@ -14,6 +14,8 @@ export const Header = (props: any) => {
 				style={styles.linearGradient}
 			>
 				{props.camera && <Image source={images.camera} style={styles.icon} />}
+				{props.menu && <Image source={images.menu} style={styles.icon} />}
+
 				<Text style={styles.headerText}>{props.title}</Text>
 				{props.profile && <Image source={images.man} style={styles.avatar} />}
 			</LinearGradient>

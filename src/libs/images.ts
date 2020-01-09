@@ -5,6 +5,7 @@ export const images = {
 	back4: require('../../assets/images/back4.png'),
 	back5: require('../../assets/images/back5.png'),
 	back6: require('../../assets/images/back6.png'),
+	back7: require('../../assets/images/back7.png'),
 	box: require('../../assets/images/box.png'),
 
 	calendar: require('../../assets/images/calendar.png'),
@@ -13,7 +14,8 @@ export const images = {
 	chart: require('../../assets/images/chart.png'),
 	clock1: require('../../assets/images/clock1.png'),
 	clock2: require('../../assets/images/clock2.png'),
-    clock3: require('../../assets/images/clock3.png'),
+	clock3: require('../../assets/images/clock3.png'),
+	clock4: require('../../assets/images/clock4.png'),
 	close: require('../../assets/images/close.png'),
 	
 	edit: require('../../assets/images/edit.png'),
@@ -24,6 +26,7 @@ export const images = {
 	follow: require('../../assets/images/follow.png'),
 	girl: require('../../assets/images/girl.png'),
 	gear: require('../../assets/images/gear.png'),
+	gold: require('../../assets/images/gold.png'),
 	google: require('../../assets/images/google.png'),
 	home: require('../../assets/images/home.png'),
 	india: require('../../assets/images/india.png'),
@@ -44,6 +47,7 @@ export const images = {
 	man: require('../../assets/images/man.png'),
 	manUser: require('../../assets/images/man-user.png'),
 	mars: require('../../assets/images/mars.png'),
+	menu: require('../../assets/images/menu.png'),
 	russia: require('../../assets/images/russia.png'),
 	score: require('../../assets/images/score.png'),
 	search: require('../../assets/images/search.png'),

@@ -10,15 +10,9 @@ export const Search = () => {
 
 	return (
 		<SafeAreaView style={{ flex: 1, margin: 12 }}>
-      <Header 
-        title={'Search'} 
-        profile
-      />
+			<Header title={'Search'} profile />
 
-      <ScrollView 
-        style={{ marginTop: 12}} 
-        showsVerticalScrollIndicator={false}
-      >
+			<ScrollView style={{ marginTop: 12 }} showsVerticalScrollIndicator={false}>
 				<View>
 					<View style={styles.inputView}>
 						<TextInput
@@ -39,16 +33,31 @@ export const Search = () => {
 				</View>
 				<View style={styles.search}>
 					<BoxComponent title={'Fashion'} img={images.interest_fashion} colors={[ '#f857a6', '#ff5858' ]} />
-					<BoxComponent	title={'Traveling'} img={images.interest_traveling} colors={[ '#55c9f2', '#3082ed' ]}	/>
+					<BoxComponent
+						title={'Traveling'}
+						img={images.interest_traveling}
+						colors={[ '#55c9f2', '#3082ed' ]}
+					/>
 					<BoxComponent title={'Food'} img={images.interest_food} colors={[ '#dce35b', '#45b649' ]} />
-					<BoxComponent	title={'Technology'} img={images.interest_technology}	colors={[ '#bdc3c7', '#2c3e50' ]}	/>
+					<BoxComponent
+						title={'Technology'}
+						img={images.interest_technology}
+						colors={[ '#bdc3c7', '#2c3e50' ]}
+					/>
 
 					<BoxComponent title={'Animals'} img={images.interest_fashion} colors={[ '#1e130c', '#9a8478' ]} />
 					<BoxComponent title={'Nature'} img={images.interest_fashion} colors={[ '#52c234', '#061700' ]} />
-					<BoxComponent title={'Automobile'} img={images.interest_automobile} colors={[ '#ffb75e', '#ed8f03' ]} />
-          <BoxComponent title={'Arts & Crafts'} img={images.interest_arts} colors={[ '#8a2387', '#e94057', '#f27121' ]} />
-          <View style={{ height: 30, width: 1}}/>
-
+					<BoxComponent
+						title={'Automobile'}
+						img={images.interest_automobile}
+						colors={[ '#ffb75e', '#ed8f03' ]}
+					/>
+					<BoxComponent
+						title={'Arts & Crafts'}
+						img={images.interest_arts}
+						colors={[ '#8a2387', '#e94057', '#f27121' ]}
+					/>
+					<View style={{ height: 30, width: 1 }} />
 				</View>
 			</ScrollView>
 		</SafeAreaView>

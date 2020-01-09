@@ -1,12 +1,24 @@
 import React from "react";
-import { SafeAreaView, View, Text } from "react-native";
+import { SafeAreaView, View, Text, ImageBackground } from "react-native";
+import { Header } from '../../../../../src/components/header';
+import { styles } from './style';
+import { images } from '../../../../../src/libs/images';
 
 export const Bazaar = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1 }}>
-        <Text>Bazaar</Text>
-      </View>
+      <ImageBackground
+        source={images.back7}
+        style={styles.backImg}
+      >
+        <View style={styles.container}>
+          <Header title={'Pauzr'} profile menu/>
+          <View style={{ flexDirection: 'row'}}>
+
+          </View>
+        </View>
+
+      </ImageBackground>
     </SafeAreaView>
   );
 };
