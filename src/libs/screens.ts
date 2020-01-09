@@ -10,6 +10,7 @@ const screens = {
   EditProfile: 'EditProfile',
   SearchUsers: 'SearchUsers',
   Chat: 'Chat',
+  GroupInfo: 'GroupInfo',
 };
 
 export default screens;
