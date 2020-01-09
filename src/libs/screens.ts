@@ -6,9 +6,10 @@ const screens = {
   Home: 'Home',
   Login: 'Login',
   Register: 'Register',
-  Profile: 'Profile',
+  ViewProfile: 'ViewProfile',
   EditProfile: 'EditProfile',
   SearchUsers: 'SearchUsers',
+  Chat: 'Chat',
 };
 
 export default screens;

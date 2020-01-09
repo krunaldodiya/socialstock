@@ -9,7 +9,7 @@ export const InitialScreen = () => {
   const {data} = useQuery(GET_INITIAL_SCREEN);
 
   // const AppNavigator = getStackNavigator(data?.initialScreen);
-  const AppNavigator = getStackNavigator(screens.SelectCountry);
+  const AppNavigator = getStackNavigator(screens.Home);
   const App = createAppContainer(AppNavigator);
 
   return <App />;
