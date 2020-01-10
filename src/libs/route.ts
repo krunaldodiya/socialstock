@@ -7,11 +7,11 @@ import SelectCountry from '../screens/auth/SelectCountry';
 import SelectLanguage from '../screens/auth/SelectLanguage';
 import {VerifyOtp} from '../screens/auth/VerifyOtp';
 import {Home} from '../screens/Home';
-import SearchUsers from 'src/screens/users/Search';
-import ViewProfile from 'src/screens/users/ViewProfile';
-import EditProfile from 'src/screens/users/EditProfile';
-import Chat from 'src/screens/chat';
-import GroupInfo from 'src/screens/group/info';
+import SearchUsers from '../screens/users/Search';
+import ViewProfile from '../screens/users/ViewProfile';
+import EditProfile from '../screens/users/EditProfile';
+import Chat from '../screens/chat';
+import GroupInfo from '../screens/group/info';
 
 const getStackNavigator = (initialRouteName: string) => {
   return createStackNavigator(
@@ -30,7 +30,7 @@ const getStackNavigator = (initialRouteName: string) => {
       GroupInfo: {screen: GroupInfo},
     },
     {
-      initialRouteName,
+      initialRouteName: 'Login',
       headerMode: 'none',
     },
   );

@@ -42,16 +42,17 @@ export const styles = StyleSheet.create({
         fontWeight: '400',
     },
     hr: {
-        marginTop: 20,
+        marginTop: 26,
         marginBottom: -20,
         width: width-24,
         height: 1,
         backgroundColor: '#cecece'
     },
     linearGradient: {
-        width: 148,
+        width: width/2-24,
         height: 69,
-        marginTop: 40,
+        marginHorizontal: 6,
+        marginTop: 50,
         shadowColor: 'rgba(47, 128, 237, 0.55)',
         shadowOffset: { width: 3, height: 0 },
         shadowRadius: 6,
@@ -64,11 +65,24 @@ export const styles = StyleSheet.create({
         fontFamily: 'Aileron',
         fontSize: 11,
         fontWeight: '600',
+        marginTop: 20
     },
     time: {
         color: '#ffffff',
         fontFamily: 'Aileron',
         fontSize: 8,
         fontWeight: '400',
+    },
+    clock: {
+        width: 65,
+        height: 65,
+        position: 'absolute',
+        top: 20,
+        left: width/7
+    },
+    wrap: {
+        marginTop: 12,
+        flexDirection: 'row',
+        flexWrap: 'wrap'
     }
 })
