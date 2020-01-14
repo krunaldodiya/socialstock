@@ -1,8 +1,8 @@
 import React from 'react';
 import { SafeAreaView, View, Text, TextInput, Image, ScrollView } from 'react-native';
-import { Header } from '../../../../../src/components/header';
+import { Header } from '../../../../components/header';
 import { styles } from './style';
-import { images } from '../../../../../src/libs/images';
+import { images } from '../../../../libs/images';
 import LinearGradient from 'react-native-linear-gradient';
 
 export const Search = () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, Text, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { styles } from './style';
-import { images } from '../../../src/libs/images';
+import { images } from '../../libs/images';
 
 export const Header = (props: any) => {
 	return (
@@ -15,7 +15,7 @@ export const Header = (props: any) => {
 			>
 				{props.camera && <Image source={images.camera} style={styles.icon} />}
 				{props.menu && <Image source={images.menu} style={styles.icon} />}
-				{props.goback && <Image source={images.goback} style={[styles.icon, { height: 16}]} />}
+				{props.goback && <Image source={images.goback} style={[ styles.icon, { height: 16 } ]} />}
 
 				<Text style={styles.headerText}>{props.title}</Text>
 				{props.profile && <Image source={images.man} style={styles.avatar} />}

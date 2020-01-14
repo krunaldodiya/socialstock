@@ -2,8 +2,9 @@ import React from 'react';
 import { SafeAreaView, View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import { styles } from './style';
 import { images } from '../../../libs/images';
-import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from 'react-navigation-hooks';
+import LinearGradient from 'react-native-linear-gradient';
+import { GradientButton } from '../../../components/gradient-button';
 
 export const Login = () => {
 	const { navigate } = useNavigation();
@@ -34,31 +35,18 @@ export const Login = () => {
 					/>
 					<Image source={images.lock} style={styles.inputImg} />
 				</View>
-				<TouchableOpacity style={{ marginTop: 20}}>
-					<LinearGradient
-						start={{ x: 0, y: 0 }}
-						end={{ x: 1, y: 0 }}
-						colors={[ '#55c9f2', '#3082ed' ]}
-						style={styles.linearGradient}
-					>
-						<Text style={styles.buttonText}>SIGN IN</Text>
-					</LinearGradient>
+
+				<TouchableOpacity style={{ marginTop: 20 }}>
+					<GradientButton title={'SIGN IN'}/>
 				</TouchableOpacity>
+
 				<TouchableOpacity
 					onPress={() => {
 						navigate('Register');
 					}}
 				>
-					<LinearGradient
-						start={{ x: 0, y: 0 }}
-						end={{ x: 1, y: 0 }}
-						colors={[ '#55c9f2', '#3082ed' ]}
-						style={styles.linearGradient}
-					>
-						<Text style={styles.buttonText}>SIGN UP</Text>
-					</LinearGradient>
+					<GradientButton title={'SIGN UP'}/>
 				</TouchableOpacity>
-				
 			</View>
 		</SafeAreaView>
 	);

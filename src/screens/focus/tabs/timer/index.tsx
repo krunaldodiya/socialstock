@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, View, Text, Image, ScrollView } from 'react-native';
-import { Header } from '../../../../../src/components/header';
-import { images } from '../../../../../src/libs/images';
+import { Header } from '../../../../components/header';
+import { images } from '../../../../libs/images';
 import { styles } from './style';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -28,27 +28,26 @@ export const Timer = () => {
 					</View>
 				</View>
 
-        <View style={styles.wrap}>
-          <BoxComponent />
-          <BoxComponent />
-          <BoxComponent />
-          <BoxComponent />
-          <BoxComponent />
-          <BoxComponent />
-        </View>
+				<View style={styles.wrap}>
+					<BoxComponent />
+					<BoxComponent />
+					<BoxComponent />
+					<BoxComponent />
+					<BoxComponent />
+					<BoxComponent />
+				</View>
 
-        <View style={styles.hr}>
+				<View style={styles.hr}>
 					<View style={styles.notice}>
 						<Text style={styles.noticeText}>17 jan 2019</Text>
 					</View>
 				</View>
 
-        <View style={styles.wrap}>
-          <BoxComponent />
-          <BoxComponent />
-          <BoxComponent />
-        </View>
-
+				<View style={styles.wrap}>
+					<BoxComponent />
+					<BoxComponent />
+					<BoxComponent />
+				</View>
 			</ScrollView>
 		</SafeAreaView>
 	);

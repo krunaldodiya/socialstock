@@ -2,8 +2,8 @@ import React from 'react';
 import { SafeAreaView, View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import { styles } from './style';
 import { images } from '../../../libs/images';
-import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from 'react-navigation-hooks';
+import { GradientButton } from '../../../components/gradient-button';
 
 export const Register = () => {
 	const { navigate } = useNavigation();
@@ -54,17 +54,12 @@ export const Register = () => {
 					/>
 					<Image source={images.call} style={styles.inputImg} />
 				</View>
-				<TouchableOpacity onPress={() => {
+				<TouchableOpacity
+					onPress={() => {
 						navigate('RequestOtp');
-					}}>
-					<LinearGradient
-						start={{ x: 0, y: 0 }}
-						end={{ x: 1, y: 0 }}
-						colors={[ '#55c9f2', '#3082ed' ]}
-						style={styles.linearGradient}
-					>
-						<Text style={styles.buttonText}>SIGN UP</Text>
-					</LinearGradient>
+					}}
+				>
+					<GradientButton title={'SIGN UP'}/>
 				</TouchableOpacity>
 			</View>
 		</SafeAreaView>
