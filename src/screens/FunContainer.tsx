@@ -80,30 +80,6 @@ const FocusTabNavigator = createBottomTabNavigator(
   }
 );
 
-const HeaderLeft = (props: any) => {
-  return (
-    <Icon
-      type="SimpleLineIcons"
-      name="add-a-photo"
-      style={{ fontSize: 22 }}
-      iconStyle={{ marginLeft: 10 }}
-      onPress={() => console.log("create post")}
-    />
-  );
-};
-
-const HeaderRight = (props: any) => {
-  return (
-    <Icon
-      type="SimpleLineIcons"
-      name="person"
-      style={{ fontSize: 22 }}
-      iconStyle={{ marginRight: 10 }}
-      onPress={() => props.navigation.push("Home")}
-    />
-  );
-};
-
 export const FunContainer = createStackNavigator(
   {
     FocusTabNavigator
@@ -114,9 +90,6 @@ export const FunContainer = createStackNavigator(
     defaultNavigationOptions: ({ navigation }) => {
       return {
         header: null
-        // headerLeft: <HeaderLeft navigation={navigation} />,
-        // title: navigation.state.routes[navigation.state.index].routeName,
-        // headerRight: <HeaderRight navigation={navigation} />
       };
     }
   }

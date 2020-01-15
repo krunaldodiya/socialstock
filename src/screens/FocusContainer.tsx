@@ -59,30 +59,6 @@ const FocusTabNavigator = createBottomTabNavigator(
   }
 );
 
-const HeaderLeft = (props: any) => {
-  return (
-    <Icon
-      type="SimpleLineIcons"
-      name="menu"
-      style={{ fontSize: 22 }}
-      iconStyle={{ marginLeft: 10 }}
-      onPress={() => props.navigation.openDrawer()}
-    />
-  );
-};
-
-const HeaderRight = (props: any) => {
-  return (
-    <Icon
-      type="SimpleLineIcons"
-      name="lightbulb-outline"
-      style={{ fontSize: 22 }}
-      iconStyle={{ marginRight: 10 }}
-      onPress={() => props.navigation.push("Home")}
-    />
-  );
-};
-
 const FocusStackNavigator = createStackNavigator(
   {
     FocusTabNavigator
@@ -93,9 +69,6 @@ const FocusStackNavigator = createStackNavigator(
     defaultNavigationOptions: ({ navigation }) => {
       return {
         header: null
-        // headerLeft: <HeaderLeft navigation={navigation} />,
-        // title: navigation.state.routes[navigation.state.index].routeName,
-        // headerRight: <HeaderRight navigation={navigation} />
       };
     }
   }
