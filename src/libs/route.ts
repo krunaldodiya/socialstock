@@ -30,7 +30,7 @@ const getStackNavigator = (initialRouteName: string) => {
       GroupInfo: {screen: GroupInfo},
     },
     {
-      initialRouteName: 'Login',
+      initialRouteName,
       headerMode: 'none',
     },
   );
