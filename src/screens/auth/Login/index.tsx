@@ -43,7 +43,7 @@ export const Login = () => {
           <Image source={images.lock} style={styles.inputImg} />
         </View>
 
-        <TouchableOpacity style={{marginTop: 20}}>
+        <TouchableOpacity style={{marginTop: 20}} onPress = {()=>{navigate('SelLanguage')}}>
           <GradientButton title={'SIGN IN'} />
         </TouchableOpacity>
 

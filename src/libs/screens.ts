@@ -11,6 +11,8 @@ const screens = {
   SearchUsers: 'SearchUsers',
   Chat: 'Chat',
   GroupInfo: 'GroupInfo',
+
+  SelLanguage : 'SelLanguage',
 };
 
 export default screens;

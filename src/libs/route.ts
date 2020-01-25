@@ -13,6 +13,8 @@ import EditProfile from '../screens/users/EditProfile';
 import Chat from '../screens/chat';
 import GroupInfo from '../screens/group/info';
 
+import {SelectLan} from '../screens/SelectLan';
+
 const getStackNavigator = (initialRouteName: string) => {
   return createStackNavigator(
     {
@@ -28,9 +30,11 @@ const getStackNavigator = (initialRouteName: string) => {
       EditProfile: {screen: EditProfile},
       Chat: {screen: Chat},
       GroupInfo: {screen: GroupInfo},
+
+      SelLanguage : {screen : SelectLan},
     },
     {
-      initialRouteName,
+      initialRouteName :'Login',
       headerMode: 'none',
     },
   );
