@@ -30,11 +30,10 @@ const getStackNavigator = (initialRouteName: string) => {
       EditProfile: {screen: EditProfile},
       Chat: {screen: Chat},
       GroupInfo: {screen: GroupInfo},
-
-      SelLanguage : {screen : SelectLan},
+      SelLanguage: {screen: SelectLan},
     },
     {
-      initialRouteName :'Login',
+      initialRouteName,
       headerMode: 'none',
     },
   );
