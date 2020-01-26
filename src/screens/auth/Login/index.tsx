@@ -4,12 +4,12 @@ import React, {useState} from 'react';
 import {Alert, Image, SafeAreaView, Text, View} from 'react-native';
 import {Button, Header, Input} from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
-import {Login as LoginState, LoginVariables} from '../../generated/Login';
-import {SET_INITIAL_SCREEN} from '../../graphql/mutation';
-import login from '../../graphql/types/mutations/login';
-import {images} from '../../libs/images';
-import screens from '../../libs/screens';
-import theme from '../../libs/theme';
+import {Login as LoginState, LoginVariables} from '../../../generated/Login';
+import {SET_INITIAL_SCREEN} from '../../../graphql/mutation';
+import login from '../../../graphql/types/mutations/login';
+import {images} from '../../../libs/images';
+import screens from '../../../libs/screens';
+import theme from '../../../libs/theme';
 import {styles} from './style';
 
 export const Login = (props: any) => {
@@ -75,7 +75,7 @@ export const Login = (props: any) => {
             borderRadius: 30,
             marginBottom: 20,
           }}>
-          <Text style={styles.logoText}>Padhaku</Text>
+          <Text style={styles.logoText}>Pauzr</Text>
         </View>
 
         <View>
