@@ -4,28 +4,23 @@ import {
   ActivityIndicator,
   FlatList,
   SafeAreaView,
-  StatusBar,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
-import {Button} from 'react-native-elements';
+import {Button, Header} from 'react-native-elements';
+import {useNavigation} from 'react-navigation-hooks';
+import {SelectLanguageItem} from '../../../components/SelectLanguageItem';
 import {
   EditProfile,
   EditProfileVariables,
 } from '../../../generated/EditProfile';
 import {GetAuthUser} from '../../../generated/GetAuthUser';
-import {
-  LoadLanguages,
-  LoadLanguages_languages,
-} from '../../../generated/LoadLanguages';
+import {GetLanguages} from '../../../generated/GetLanguages';
 import {SET_INITIAL_SCREEN} from '../../../graphql/mutation';
 import edit_profile from '../../../graphql/types/mutations/edit_profile';
 import get_auth_user from '../../../graphql/types/queries/get_auth_user';
 import get_languages from '../../../graphql/types/queries/get_languages';
 import screens from '../../../libs/screens';
-import {styles} from './style';
-import {useNavigation} from 'react-navigation-hooks';
 
 const SelectLanguage = (props: any) => {
   const {navigate} = useNavigation();
@@ -34,7 +29,7 @@ const SelectLanguage = (props: any) => {
   const {data: authUser} = useQuery<GetAuthUser, {}>(get_auth_user);
 
   const {data: languages, loading: loadingLanguages} = useQuery<
-    LoadLanguages,
+    GetLanguages,
     {}
   >(get_languages, {
     fetchPolicy: 'cache-and-network',
@@ -49,6 +44,7 @@ const SelectLanguage = (props: any) => {
 
   const setLanguage = async () => {
     navigate('Home');
+
     try {
       await editProfile({
         variables: {
@@ -62,51 +58,43 @@ const SelectLanguage = (props: any) => {
     }
   };
 
-  const keyExtractor = (item: any, index: number) => index.toString();
-
-  const renderItem = (data: {item: LoadLanguages_languages}) => {
-    const {item} = data;
-
-    const selectedColor = selectedLanguage == item.shortname ? 'red' : 'black';
-
-    return (
-      <TouchableOpacity
-        style={styles.language}
-        onPress={() => setSelectedLanguage(item.shortname)}>
-        <Text
-          style={[
-            styles.text,
-            {
-              color: selectedColor,
-            },
-          ]}>
-          {item.name}
-        </Text>
-      </TouchableOpacity>
-    );
-  };
-
   if (!languages && loadingLanguages) {
     return <ActivityIndicator style={{justifyContent: 'center', flex: 1}} />;
   }
 
   return (
     <Fragment>
-      <StatusBar backgroundColor="#0D62A2" barStyle="light-content" />
+      <Header
+        style={{flex: 1}}
+        statusBarProps={{
+          barStyle: 'light-content',
+          translucent: true,
+          backgroundColor: '#3082ed',
+        }}
+        barStyle="light-content"
+        containerStyle={{backgroundColor: '#3082ed'}}
+        centerComponent={{
+          text: 'Select Language',
+          style: {color: 'white', fontSize: 22},
+        }}
+      />
 
       <SafeAreaView style={{flex: 1}}>
-        <View style={{padding: 10}}>
-          <Text style={{fontSize: 22, textAlign: 'center'}}>
-            Select Language
-          </Text>
-        </View>
-
-        <View style={{flex: 1, padding: 10}}>
+        <View style={{flex: 1}}>
           <FlatList
             data={languages ? languages.languages : []}
             extraData={authUser}
-            renderItem={renderItem}
-            keyExtractor={keyExtractor}
+            renderItem={({item}) => {
+              return (
+                <SelectLanguageItem
+                  {...props}
+                  item={item}
+                  selectedLanguage={selectedLanguage}
+                  setSelectedLanguage={setSelectedLanguage}
+                />
+              );
+            }}
+            keyExtractor={(item: any, index: number) => index.toString()}
           />
         </View>
 
