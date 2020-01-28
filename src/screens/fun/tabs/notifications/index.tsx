@@ -5,7 +5,7 @@ import {styles} from './style';
 import {images} from '../../../../libs/images';
 import {GradientButton} from '../../../../components/gradient-button';
 
-export const Notifications = () => {
+export const Notifications = (props: any) => {
   return (
     <SafeAreaView style={styles.container}>
       <Header title={'Likes'} camera profile />
