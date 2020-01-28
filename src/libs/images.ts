@@ -60,4 +60,17 @@ export const images = {
   twitter: require('../../assets/images/twitter.png'),
   us: require('../../assets/images/united-states.png'),
   world: require('../../assets/images/world.png'),
+
+  nav : require('../../assets/images/nav.png'),
+  happy_eyes : require('../../assets/images/happy_eyes.png'),
+  plus : require('../../assets/images/plus.png'),
+  send : require('../../assets/images/send.png'),
+  heart: require('../../assets/images/heart.png'),
+  home_outline: require('../../assets/images/home-outline.png'),
+  heart_white: require('../../assets/images/heart-white.png'),
+  msg: require('../../assets/images/msg.png'),
+  shop : require('../../assets/images/shopping.png'),
+  friend: require('../../assets/images/friends.png'),
+  leave : require('../../assets/images/leave.png'),
+  white_plus: require('../../assets/images/white_plus.png'),
 };

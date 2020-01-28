@@ -18,17 +18,18 @@ import {Header} from '../../../../src/components/header';
 import {images} from '../../../../src/libs/images';
 import {styles} from './style';
 
-const edu = "The University of Oxford is one of the leading universities in the world.";
-const posts = 47;
-const followers = '1,570';
-const following = 80;
-const ViewProfile = () => {
+const edu = "The University of Oxford is one of the leading universities in the world. Oxford Service, Oxford University.";
+const posts = 85;
+const followers = '2,670';
+const following = 20;
+
+const MyProfile = () => {
   const [value, onChangeList] = React.useState(false);
   return (
     <>
     <SafeAreaView style={{flex: 1, backgroundColor:'#FFF'}}>
-      <View style={{margin: 12}}>
-        <Header title={'My Profile'} profile notify menu
+      <View >
+        <Header title={'Kristen Stewart'} back gradient
         
         statusBarProps={{
           barStyle: 'light-content',
@@ -40,8 +41,8 @@ const ViewProfile = () => {
         barStyle="light-content"
         />
       </View>
-          <View style={{marginHorizontal: 12}}>
-            <BoxProfileComponent avatar name ={'Emma Watson'} education = {edu} post = {posts} followers = {followers} following = {following} />
+          <View style={{marginHorizontal: 12, marginTop: 12}}>
+            <BoxProfileComponent avatar  education = {edu} post = {posts} followers = {followers} following = {following} />
           </View>
           <View style={{marginTop: 10, flexDirection:'row', justifyContent:'space-around', alignItems:'center'}}>
             <TouchableOpacity>
@@ -102,12 +103,11 @@ const BoxProfileComponent = (props: any) => {
           colors={['#B7BFC2', '#2E3F51']}
           style={styles.box}>
         <View style = {styles.profileInfo}>
-          <Image style = {styles.avatar} source = {images.girl}></Image>
-          <TouchableOpacity style={styles.plusIcon}>
-            <Image style={{width: 12, height: 12,}} source={images.plus}></Image>
-          </TouchableOpacity>
+            <View style = {styles.avatarContain}>
+                <Image style = {styles.avatar}  source = {images.girl}></Image>
+           </View>
           <View style={styles.textInfo}>
-            <Text style={{color:'#FFF', fontSize: 24, fontWeight: 'bold'}}>{props.name}</Text>
+            {props.name && ( <Text style={{color:'#FFF', fontSize: 24, fontWeight: 'bold'}}>{props.name}</Text> )}
             <Text style={{color:'#FFF', fontSize: 14, fontWeight: '700'}}>{props.education}</Text>
           </View>
           
@@ -119,11 +119,11 @@ const BoxProfileComponent = (props: any) => {
               colors={['#55c9f2', '#3082ed']}
               style={styles.button}>
               <TouchableOpacity style={{justifyContent:'center', alignItems:'center'}} >
-                <Text style={{fontSize: 16, color:'#FFF', fontWeight:'700'}}>Create Post</Text>
+                <Text style={{fontSize: 16, color:'#FFF', fontWeight:'700'}}>Follow</Text>
               </TouchableOpacity>
             </LinearGradient>
             <TouchableOpacity style={styles.editProfile} >
-                <Text style={{fontSize: 16, color:'#FFF', fontWeight:'700'}}>Edit Profile</Text>
+                <Text style={{fontSize: 16, color:'#FFF', fontWeight:'700'}}>Message</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.whitebox}>
@@ -147,4 +147,4 @@ const BoxProfileComponent = (props: any) => {
 
 
 
-export default ViewProfile;
+export default MyProfile;

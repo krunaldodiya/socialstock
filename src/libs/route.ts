@@ -9,11 +9,16 @@ import {VerifyOtp} from '../screens/auth/VerifyOtp';
 import {Home} from '../screens/Home';
 import SearchUsers from '../screens/users/Search';
 import ViewProfile from '../screens/users/ViewProfile';
-import EditProfile from '../screens/users/EditProfile';
+import {EditProfile} from '../screens/users/EditProfile';
 import Chat from '../screens/chat';
 import GroupInfo from '../screens/group/info';
 
 import {SelectLan} from '../screens/SelectLan';
+
+import { Search } from 'src/screens/fun/tabs/search';
+import MyProfile from '../screens/users/ViewProfile/myprofile'
+
+import {InviteFriends}  from '../screens/users/Friend';
 
 const getStackNavigator = (initialRouteName: string) => {
   return createStackNavigator(
@@ -31,9 +36,11 @@ const getStackNavigator = (initialRouteName: string) => {
       Chat: {screen: Chat},
       GroupInfo: {screen: GroupInfo},
       SelLanguage: {screen: SelectLan},
+      MyProfile : {screen : MyProfile},
+      InviteFriend : {screen: InviteFriends},
     },
     {
-      initialRouteName,
+      initialRouteName : 'InviteFriend',
       headerMode: 'none',
     },
   );
