@@ -4,8 +4,8 @@ import {FunContainer} from './FunContainer';
 
 export const Home = createMaterialTopTabNavigator(
   {
-    Fun: FunContainer,
     Focus: FocusContainer,
+    Fun: FunContainer,
   },
   {
     defaultNavigationOptions: {
