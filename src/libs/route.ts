@@ -40,7 +40,7 @@ const getStackNavigator = (initialRouteName: string) => {
       InviteFriend : {screen: InviteFriends},
     },
     {
-      initialRouteName : 'InviteFriend',
+      initialRouteName : 'RequestOtp',
       headerMode: 'none',
     },
   );

@@ -73,4 +73,6 @@ export const images = {
   friend: require('../../assets/images/friends.png'),
   leave : require('../../assets/images/leave.png'),
   white_plus: require('../../assets/images/white_plus.png'),
+  optBack: require('../../assets/images/optBack.png'),
+  yellow_circle: require('../../assets/images/yellow_circle.png'),
 };
