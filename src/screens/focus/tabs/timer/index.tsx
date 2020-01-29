@@ -4,10 +4,10 @@ import {
   Dimensions,
   Image,
   SafeAreaView,
-  StatusBar,
   TouchableOpacity,
   View,
 } from 'react-native';
+import {Header} from '../../../../components/header';
 import TimerCard from '../../../../components/Timer/card';
 import {baseUrl} from '../../../../libs/vars';
 
@@ -89,7 +89,7 @@ export const Timer = (props: any) => {
 
   const RenderLayout = () => (
     <Fragment>
-      <StatusBar barStyle="light-content" backgroundColor="#0D62A2" />
+      <Header {...props} title={'Pauzr'} profile menu />
 
       <SafeAreaView style={{flex: 1}}>
         <View style={{flex: 1, backgroundColor: 'skyblue'}}>

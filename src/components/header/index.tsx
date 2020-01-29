@@ -1,37 +1,57 @@
 import React from 'react';
-import {SafeAreaView, Text, Image, View} from 'react-native';
+import {Header as HeaderBar} from 'react-native-elements';
+import screens from '../../libs/screens';
+import theme from '../../libs/theme';
 import LinearGradient from 'react-native-linear-gradient';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import Icon from 'react-native-vector-icons';
-import {styles} from './style';
-import {images} from '../../libs/images';
 
 export const Header = (props: any) => {
   return (
-    <SafeAreaView>
-      <LinearGradient
-        start={{x: 0, y: 0}}
-        end={{x: 1, y: 0}}
-        colors={ !props.gradient ? ['#55c9f2', '#3082ed'] : ['#FFF', '#FFF']}
-        style={!props.gradient ? styles.linearGradient : styles.linearGradient2}>
-        {props.camera && <Image source={images.camera} style={styles.icon} />}
-        {props.menu && <Image source={images.menu} style={styles.icon } />}
-        {props.back && <MaterialIcons style = {styles.icon2}
-              name="keyboard-arrow-left"
-              size={36}
-              color={'#D6D6D6' }
-            />}
-        {props.goback && (
-          <Image source={images.goback} style={[styles.icon, {height: 16}]} />
-        )}
-
-        <Text style={!props.gradient ? styles.headerText : styles.headerText2}>{props.title}</Text>
-        {props.profile && <Image source={images.man} style={styles.avatar} />}
-        {props.nav && 
-          <Image style = {styles.avatar2} source = {images.nav}/>}
-          
-        {props.notify && <View style = {!props.gradient? styles.notify : styles.notify2} ></View>}
-      </LinearGradient>
-    </SafeAreaView>
+    <HeaderBar
+      ViewComponent={LinearGradient}
+      linearGradientProps={{
+        colors: ['#55c9f2', '#3082ed'],
+      }}
+      placement="center"
+      statusBarProps={{
+        backgroundColor: '#3082ed',
+        barStyle: 'light-content',
+        translucent: true,
+      }}
+      barStyle="light-content"
+      leftContainerStyle={{}}
+      leftComponent={{
+        icon: 'menu',
+        color: '#fff',
+        size: 22,
+        onPress: async () => {
+          props.navigation.openDrawer();
+        },
+      }}
+      centerContainerStyle={{}}
+      centerComponent={{
+        text: 'test',
+        style: {
+          color: '#fff',
+          fontSize: 22,
+          fontFamily: theme.fonts.TitilliumWebBlack,
+        },
+      }}
+      rightContainerStyle={{}}
+      rightComponent={{
+        icon: 'person',
+        color: '#fff',
+        size: 22,
+        onPress: async () => {
+          props.navigation.push(screens.MyProfile);
+        },
+      }}
+      containerStyle={{
+        marginTop: 35,
+        marginBottom: 5,
+        marginHorizontal: 10,
+        borderRadius: 10,
+        alignItems: 'flex-start',
+      }}
+    />
   );
 };

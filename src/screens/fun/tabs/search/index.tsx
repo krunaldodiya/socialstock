@@ -12,12 +12,12 @@ import {styles} from './style';
 import {images} from '../../../../libs/images';
 import LinearGradient from 'react-native-linear-gradient';
 
-export const Search = () => {
+export const Search = (props: any) => {
   const [value, onChangeText] = React.useState('');
 
   return (
     <SafeAreaView style={{flex: 1, margin: 12}}>
-      <Header title={'Search'} profile />
+      <Header {...props} title={'Search'} profile />
 
       <ScrollView style={{marginTop: 12}} showsVerticalScrollIndicator={false}>
         <View>

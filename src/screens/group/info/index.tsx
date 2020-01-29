@@ -75,6 +75,7 @@ export const GroupInfo = (props: any) => {
           <BoxRedSquareComponent />
         </View>
       </View>
+
       <View style={{flexDirection: 'row'}}>
         <TouchableOpacity style={[styles.leaveBtn]}>
           <View

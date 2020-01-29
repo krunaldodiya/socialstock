@@ -43,11 +43,12 @@ const _chartConfig = {
   color: () => `#111`,
 };
 
-export const Scoreboard = () => {
+export const Scoreboard = (props: any) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <ScrollView style={{padding: 12}}>
-        <Header title={'Scoreboard'} profile menu />
+        <Header {...props} title={'Pauzr'} profile menu />
+
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 0}}
