@@ -9,7 +9,6 @@ const screens = {
   ViewProfile: 'ViewProfile',
   MyProfile: 'MyProfile',
   EditProfile: 'EditProfile',
-  SearchUsers: 'SearchUsers',
   Chat: 'Chat',
   GroupInfo: 'GroupInfo',
   Group: 'Group',

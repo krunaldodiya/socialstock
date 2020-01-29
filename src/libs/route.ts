@@ -16,7 +16,6 @@ import {Search} from '../screens/fun/tabs/search';
 import {GroupInfo} from '../screens/group/info';
 import {Home} from '../screens/Home';
 import {EditProfile} from '../screens/users/EditProfile';
-import SearchUsers from '../screens/users/Search';
 import ViewProfile from '../screens/users/ViewProfile';
 import MyProfile from '../screens/users/ViewProfile/myprofile';
 import {Conversation} from '../screens/fun/tabs/conversation';
@@ -31,7 +30,6 @@ const getStackNavigator = (initialRouteName: string) => {
       SelectCountry: {screen: SelectCountry},
       RequestOtp: {screen: RequestOtp},
       VerifyOtp: {screen: VerifyOtp},
-      SearchUsers: {screen: SearchUsers},
       ViewProfile: {screen: ViewProfile},
       EditProfile: {screen: EditProfile},
       Chat: {screen: Chat},
