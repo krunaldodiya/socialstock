@@ -1,23 +1,23 @@
 import React from 'react';
 import {
-  SafeAreaView,
-  View,
-  Text,
   Image,
+  SafeAreaView,
   ScrollView,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
 import {Header} from '../../../../../src/components/header';
 import {images} from '../../../../../src/libs/images';
+import screens from '../../../../libs/screens';
 import {styles} from './style';
 
-export const Groups = () => {
+export const Groups = (props: any) => {
   const [value, onChangeList] = React.useState(false);
   return (
     <SafeAreaView style={{flex: 1}}>
-      <View style={{margin: 12}}>
-        <Header title={'Groups'} profile menu />
-      </View>
+      <Header {...props} title={'Pauzr'} profile menu />
+
       <ScrollView>
         <View>
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
@@ -41,7 +41,10 @@ export const Groups = () => {
           )}
           {!value && (
             <View style={{marginHorizontal: 12}}>
-              <BoxListComponent />
+              <TouchableOpacity
+                onPress={() => props.navigation.push(screens.GroupInfo)}>
+                <BoxListComponent />
+              </TouchableOpacity>
               <BoxListComponent />
             </View>
           )}

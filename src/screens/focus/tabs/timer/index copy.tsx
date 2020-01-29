@@ -5,10 +5,10 @@ import {images} from '../../../../libs/images';
 import {styles} from './style';
 import LinearGradient from 'react-native-linear-gradient';
 
-export const Timer = () => {
+export const Timer = (props: any) => {
   return (
     <SafeAreaView style={{flex: 1, margin: 12}}>
-      <Header title={'Minutes'} profile goback />
+      <Header {...props} title={'Pauzr'} profile menu />
 
       <ScrollView style={{flex: 1, marginTop: 12}}>
         <View style={styles.bar}>

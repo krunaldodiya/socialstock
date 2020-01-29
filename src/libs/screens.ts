@@ -9,12 +9,16 @@ const screens = {
   ViewProfile: 'ViewProfile',
   MyProfile: 'MyProfile',
   EditProfile: 'EditProfile',
-  SearchUsers: 'SearchUsers',
   Chat: 'Chat',
   GroupInfo: 'GroupInfo',
-  SelLanguage: 'SelLanguage',
-  InviteFriend : 'InviteFriend',
-  
+  Group: 'Group',
+  Scoreboard: 'Scoreboard',
+  Timer: 'Timer',
+  Bazaar: 'Bazaar',
+  Conversation: 'Conversation',
+  Feeds: 'Feeds',
+  Notifications: 'Notifications',
+  Search: 'Search',
 };
 
 export default screens;

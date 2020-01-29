@@ -1,18 +1,23 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Svg, Rect } from 'react-native-svg';
-import { AbstractChart } from 'react-native-chart-kit';
+import {View} from 'react-native';
+import {Svg, Rect} from 'react-native-svg';
+import {AbstractChart} from 'react-native-chart-kit';
 
 const barWidth = 18;
 class BarChart extends AbstractChart {
   renderBars = config => {
-    const { data, width, height, paddingTop, paddingRight } = config;
+    const {data, width, height, paddingTop, paddingRight} = config;
     return data.map((x, i) => {
-      const barHeight = (height / 4) * 3 * ((x - Math.min(...data)) / this.calcScaler(data));
+      const barHeight =
+        (height / 4) * 3 * ((x - Math.min(...data)) / this.calcScaler(data));
       return (
         <Rect
           key={Math.random()}
-          x={paddingRight + (i * (width - paddingRight)) / data.length + barWidth / 2}
+          x={
+            paddingRight +
+            (i * (width - paddingRight)) / data.length +
+            barWidth / 2
+          }
           y={(height / 4) * 3 - barHeight + paddingTop}
           width={barWidth}
           height={barHeight}
@@ -23,17 +28,22 @@ class BarChart extends AbstractChart {
   };
 
   renderBarTops = config => {
-    const { data, width, height, paddingTop, paddingRight } = config;
+    const {data, width, height, paddingTop, paddingRight} = config;
     return data.map((x, i) => {
-      const barHeight = (height / 4) * 3 * ((x - Math.min(...data)) / this.calcScaler(data));
+      const barHeight =
+        (height / 4) * 3 * ((x - Math.min(...data)) / this.calcScaler(data));
       return (
         <Rect
           key={Math.random()}
-          x={paddingRight + (i * (width - paddingRight)) / data.length + barWidth / 2}
+          x={
+            paddingRight +
+            (i * (width - paddingRight)) / data.length +
+            barWidth / 2
+          }
           y={(height / 4) * 3 - barHeight + paddingTop}
           width={barWidth}
           height={3}
-          fill={"#56ccf2"}
+          fill={'#56ccf2'}
         />
       );
     });
@@ -42,8 +52,8 @@ class BarChart extends AbstractChart {
   render() {
     const paddingTop = 16;
     const paddingRight = 64;
-    const { width, height, data, style = {} } = this.props;
-    const { borderRadius = 0 } = style;
+    const {width, height, data, style = {}} = this.props;
+    const {borderRadius = 0} = style;
     const config = {
       width,
       height,

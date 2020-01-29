@@ -1,7 +1,14 @@
 import {useMutation} from '@apollo/react-hooks';
 import AsyncStorage from '@react-native-community/async-storage';
 import React, {useState} from 'react';
-import {Alert, Image, SafeAreaView, Text, View, TouchableOpacity} from 'react-native';
+import {
+  Alert,
+  Image,
+  SafeAreaView,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import {Button, Header, Input, Icon} from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
 import {Login as LoginState, LoginVariables} from '../../../generated/Login';
@@ -11,7 +18,7 @@ import {images} from '../../../libs/images';
 import screens from '../../../libs/screens';
 import theme from '../../../libs/theme';
 import {styles} from './style';
-import { TouchableHighlight } from 'react-native-gesture-handler';
+import {TouchableHighlight} from 'react-native-gesture-handler';
 
 export const EditProfile = (props: any) => {
   const [name, setName] = useState();
@@ -21,9 +28,7 @@ export const EditProfile = (props: any) => {
 
   const [birthdaty, setBirthday] = useState();
 
-  const editPhoto = ()=>{
-
-  }
+  const editPhoto = () => {};
   return (
     <SafeAreaView style={styles.container}>
       <Header
@@ -38,7 +43,6 @@ export const EditProfile = (props: any) => {
       />
       <Image source={images.back3} style={styles.backImg} />
 
-
       <View style={styles.container}>
         <View
           style={{
@@ -50,9 +54,14 @@ export const EditProfile = (props: any) => {
             marginTop: 120,
             marginBottom: 15,
           }}>
-          <Image source ={images.girl} style={{width: 136, height: 136}} borderRadius = {68} ></Image>
-          <TouchableOpacity style = {styles.editImage} onPress = {()=>editPhoto()}>
-            <Image source= {images.edit} style={{width: 16, height: 16}}></Image>
+          <Image
+            source={images.girl}
+            style={{width: 136, height: 136}}
+            borderRadius={68}></Image>
+          <TouchableOpacity
+            style={styles.editImage}
+            onPress={() => editPhoto()}>
+            <Image source={images.edit} style={{width: 16, height: 16}}></Image>
           </TouchableOpacity>
         </View>
         <View style={styles.inputView}>
@@ -63,17 +72,18 @@ export const EditProfile = (props: any) => {
               type: 'ionicons',
               name: 'person',
               size: 24,
-              color: '#DDD'
+              color: '#DDD',
             }}
-
             leftIconContainerStyle={{marginRight: 10}}
             value={name}
             onChangeText={name => setName(name)}
             autoCorrect={false}
             autoCapitalize="none"
           />
-          <TouchableOpacity style = {styles.editImageInput} onPress = {()=>editPhoto()}>
-            <Image source= {images.edit} style={{width: 16, height: 16}}></Image>
+          <TouchableOpacity
+            style={styles.editImageInput}
+            onPress={() => editPhoto()}>
+            <Image source={images.edit} style={{width: 16, height: 16}}></Image>
           </TouchableOpacity>
         </View>
         <View style={{}}>
@@ -84,7 +94,7 @@ export const EditProfile = (props: any) => {
               type: 'material',
               name: 'room',
               size: 24,
-              color: '#DDD'
+              color: '#DDD',
             }}
             multiline
             leftIconContainerStyle={{marginRight: 10}}
@@ -93,8 +103,8 @@ export const EditProfile = (props: any) => {
             autoCorrect={false}
             autoCapitalize="none"
           />
-          <TouchableOpacity style = {styles.editImageInput2} >
-            <Image source= {images.edit} style={{width: 16, height: 16}}></Image>
+          <TouchableOpacity style={styles.editImageInput2}>
+            <Image source={images.edit} style={{width: 16, height: 16}}></Image>
           </TouchableOpacity>
         </View>
         <View style={styles.inputView}>
@@ -105,7 +115,7 @@ export const EditProfile = (props: any) => {
               type: 'ionicons',
               name: 'email',
               size: 24,
-              color: '#DDD'
+              color: '#DDD',
             }}
             leftIconContainerStyle={{marginRight: 10}}
             value={email}
@@ -113,8 +123,10 @@ export const EditProfile = (props: any) => {
             autoCorrect={false}
             autoCapitalize="none"
           />
-          <TouchableOpacity style = {styles.editImageInput} >
-            <Image source= {images.edit_remove} style={{width: 16, height: 18}}></Image>
+          <TouchableOpacity style={styles.editImageInput}>
+            <Image
+              source={images.edit_remove}
+              style={{width: 16, height: 18}}></Image>
           </TouchableOpacity>
         </View>
         <View style={styles.inputView}>
@@ -125,7 +137,7 @@ export const EditProfile = (props: any) => {
               type: 'ionicons',
               name: 'phone',
               size: 24,
-              color: '#DDD'
+              color: '#DDD',
             }}
             leftIconContainerStyle={{marginRight: 10}}
             value={mobile}
@@ -133,8 +145,10 @@ export const EditProfile = (props: any) => {
             autoCorrect={false}
             autoCapitalize="none"
           />
-          <TouchableOpacity style = {styles.editImageInput} >
-            <Image source= {images.edit_remove} style={{width: 16, height: 18}}></Image>
+          <TouchableOpacity style={styles.editImageInput}>
+            <Image
+              source={images.edit_remove}
+              style={{width: 16, height: 18}}></Image>
           </TouchableOpacity>
         </View>
         <View style={styles.inputView}>
@@ -145,35 +159,63 @@ export const EditProfile = (props: any) => {
               type: 'foundation',
               name: 'calendar',
               size: 24,
-              color: '#DDD'
+              color: '#DDD',
             }}
             leftIconContainerStyle={{marginRight: 10}}
             autoCorrect={false}
             autoCapitalize="none"
             secureTextEntry={true}
           />
-          <TouchableOpacity style = {styles.editImageInput} >
-            <Image source= {images.edit} style={{width: 16, height: 16}}></Image>
+          <TouchableOpacity style={styles.editImageInput}>
+            <Image source={images.edit} style={{width: 16, height: 16}}></Image>
           </TouchableOpacity>
         </View>
 
-        <View style={{ marginTop: 20, flexDirection: 'row', justifyContent:'space-between'}}>
+        <View
+          style={{
+            marginTop: 20,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+          }}>
           <LinearGradient
-              start={{x: 0, y: 0}}
-              end={{x: 0, y: 1}}
-              colors={['#55c9f2', '#3082ed']}
-              style={styles.button}>
-              <TouchableOpacity style={styles.touch} >
-                <Icon type = {'foundation'} name = {'male-symbol'} size = {30} color={'#FFF'} ></Icon>
-                <Text style={{fontSize: 16, color:'#FFF', fontWeight:'700', marginLeft:10}}>Male</Text>
-              </TouchableOpacity>
+            start={{x: 0, y: 0}}
+            end={{x: 0, y: 1}}
+            colors={['#55c9f2', '#3082ed']}
+            style={styles.button}>
+            <TouchableOpacity style={styles.touch}>
+              <Icon
+                type={'foundation'}
+                name={'male-symbol'}
+                size={30}
+                color={'#FFF'}></Icon>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: '#FFF',
+                  fontWeight: '700',
+                  marginLeft: 10,
+                }}>
+                Male
+              </Text>
+            </TouchableOpacity>
           </LinearGradient>
-          <View
-              style={styles.button2}>
-              <TouchableOpacity style={styles.touch} >
-                <Icon type = {'foundation'} name = {'female-symbol'} size = {30} color={'#000'} ></Icon>
-                <Text style={{fontSize: 16, color:'#000', fontWeight:'700', marginLeft: 10}}>Female</Text>
-              </TouchableOpacity>
+          <View style={styles.button2}>
+            <TouchableOpacity style={styles.touch}>
+              <Icon
+                type={'foundation'}
+                name={'female-symbol'}
+                size={30}
+                color={'#000'}></Icon>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: '#000',
+                  fontWeight: '700',
+                  marginLeft: 10,
+                }}>
+                Female
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
         <LinearGradient
@@ -181,8 +223,16 @@ export const EditProfile = (props: any) => {
           end={{x: 0, y: 1}}
           colors={['#55c9f2', '#3082ed']}
           style={styles.savebutton}>
-          <TouchableOpacity style={styles.touch} >
-            <Text style={{fontSize: 16, color:'#FFF', fontWeight:'700', marginLeft:10}}>Save</Text>
+          <TouchableOpacity style={styles.touch}>
+            <Text
+              style={{
+                fontSize: 16,
+                color: '#FFF',
+                fontWeight: '700',
+                marginLeft: 10,
+              }}>
+              Save
+            </Text>
           </TouchableOpacity>
         </LinearGradient>
       </View>

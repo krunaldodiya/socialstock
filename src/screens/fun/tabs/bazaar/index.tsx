@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { SafeAreaView, View, Text, ImageBackground, Image} from "react-native";
 import {Icon, } from 'react-native-elements';
@@ -25,6 +26,26 @@ export const Bazaar = () => {
         </View>
         </View>
       </ImageBackground>
+=======
+import React from 'react';
+import {SafeAreaView, View, Text, ImageBackground} from 'react-native';
+import {Header} from '../../../../../src/components/header';
+import {styles} from './style';
+import {images} from '../../../../../src/libs/images';
+
+export const Bazaar = (props: any) => {
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <Header {...props} title={'Pauzr'} profile menu />
+
+      <View style={{flex: 1}}>
+        <ImageBackground source={images.back7} style={styles.backImg}>
+          <View style={styles.container}>
+            <View style={{flexDirection: 'row'}}></View>
+          </View>
+        </ImageBackground>
+      </View>
+>>>>>>> 29db7e14fbe111b40bf8d9163bb52b9f8373d445
     </SafeAreaView>
   );
 };

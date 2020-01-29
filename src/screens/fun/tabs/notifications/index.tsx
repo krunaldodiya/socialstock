@@ -8,7 +8,8 @@ import {GradientButton} from '../../../../components/gradient-button';
 export const Notifications = (props: any) => {
   return (
     <SafeAreaView style={styles.container}>
-      <Header title={'Likes'} camera profile />
+      <Header {...props} title={'Likes'} camera profile />
+
       <View style={{flex: 1}}>
         <BoxListComponent pic />
         <BoxListComponent follow />

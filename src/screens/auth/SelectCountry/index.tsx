@@ -4,20 +4,20 @@ import {
   ActivityIndicator,
   FlatList,
   SafeAreaView,
-  StatusBar,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
+import {Header, Input} from 'react-native-elements';
 import {
   LoadCountries,
   LoadCountries_countries,
 } from '../../../generated/LoadCountries';
 import {SET_SELECTED_COUNTRY} from '../../../graphql/mutation';
 import load_countries from '../../../graphql/types/queries/load_countries';
+import theme from '../../../libs/theme';
 
-const SelectCountry = (props: any) => {
+export const SelectCountry = (props: any) => {
   const [keywords, setKeywords] = useState('');
 
   const {data: countries, loading: loadingCountries} = useQuery<
@@ -29,7 +29,7 @@ const SelectCountry = (props: any) => {
 
   const [setSelectedCountry] = useMutation(SET_SELECTED_COUNTRY);
 
-  const handleSetSelectedCountry = async (item: any) => {
+  const setSelectedCountryHandler = async (item: any) => {
     try {
       await setSelectedCountry({
         variables: {
@@ -60,9 +60,16 @@ const SelectCountry = (props: any) => {
       <TouchableOpacity
         style={{padding: 10}}
         onPress={() => {
-          handleSetSelectedCountry(item);
+          setSelectedCountryHandler(item);
         }}>
-        <Text style={{color: '#000'}}>{item.name}</Text>
+        <Text
+          style={{
+            color: '#000',
+            fontFamily: theme.fonts.QuicksandRegular,
+            fontSize: 18,
+          }}>
+          {item.name}
+        </Text>
       </TouchableOpacity>
     );
   };
@@ -78,28 +85,57 @@ const SelectCountry = (props: any) => {
 
   return (
     <Fragment>
-      <StatusBar backgroundColor="#0D62A2" barStyle="light-content" />
+      <Header
+        style={{flex: 1}}
+        statusBarProps={{
+          barStyle: 'light-content',
+          translucent: true,
+          backgroundColor: '#3082ed',
+        }}
+        barStyle="light-content"
+        containerStyle={{backgroundColor: '#3082ed'}}
+        centerComponent={{
+          text: 'Select Language',
+          style: {
+            color: 'white',
+            fontSize: 22,
+            fontFamily: theme.fonts.QuicksandRegular,
+          },
+        }}
+      />
 
       <SafeAreaView style={{flex: 1}}>
-        <View
-          style={{flex: 1, justifyContent: 'center', backgroundColor: '#fff'}}>
-          <TextInput
-            placeholder="Filter Country"
-            value={keywords}
-            onChangeText={value => setKeywords(value)}
-          />
+        <View style={{flex: 1}}>
+          <View style={{borderBottomWidth: 1, borderBottomColor: '#bbb'}}>
+            <Input
+              placeholder="Filter Country"
+              value={keywords}
+              onChangeText={value => setKeywords(value)}
+              inputContainerStyle={{borderBottomWidth: 0}}
+              labelStyle={{
+                color: '#000',
+                fontFamily: theme.fonts.QuicksandSemiBold,
+                fontSize: 18,
+              }}
+              inputStyle={{
+                color: '#000',
+                fontFamily: theme.fonts.QuicksandSemiBold,
+                fontSize: 18,
+              }}
+            />
+          </View>
 
-          <FlatList
-            keyboardShouldPersistTaps="handled"
-            keyExtractor={keyExtractor}
-            data={getFilteredCountries()}
-            ItemSeparatorComponent={ItemSeparatorComponent}
-            renderItem={renderItem}
-          />
+          <View style={{padding: 10}}>
+            <FlatList
+              keyboardShouldPersistTaps="handled"
+              keyExtractor={keyExtractor}
+              data={getFilteredCountries()}
+              ItemSeparatorComponent={ItemSeparatorComponent}
+              renderItem={renderItem}
+            />
+          </View>
         </View>
       </SafeAreaView>
     </Fragment>
   );
 };
-
-export default React.memo(SelectCountry);
