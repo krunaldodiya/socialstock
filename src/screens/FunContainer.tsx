@@ -3,7 +3,7 @@ import {Icon} from 'react-native-elements';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {Bazaar} from './fun/tabs/bazaar';
-import {ChatConversation} from './fun/tabs/ChatConversation';
+import {Conversation} from './fun/tabs/conversation';
 import {Feeds} from './fun/tabs/feeds';
 import {Notifications} from './fun/tabs/notifications';
 import {Search} from './fun/tabs/search';
@@ -46,8 +46,8 @@ const FocusTabNavigator = createBottomTabNavigator(
         ),
       },
     },
-    ChatConversation: {
-      screen: ChatConversation,
+    Conversation: {
+      screen: Conversation,
       navigationOptions: {
         tabBarIcon: ({tintColor}: any) => (
           <Icon

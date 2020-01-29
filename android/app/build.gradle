@@ -128,6 +128,7 @@ android {
     }
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.socialstock"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -155,9 +156,8 @@ android {
             signingConfig signingConfigs.debug
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://facebook.github.io/react-native/docs/signed-apk-android.
             signingConfig signingConfigs.debug
+            shrinkResources enableProguardInReleaseBuilds
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

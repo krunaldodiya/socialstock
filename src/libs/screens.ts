@@ -12,8 +12,6 @@ const screens = {
   SearchUsers: 'SearchUsers',
   Chat: 'Chat',
   GroupInfo: 'GroupInfo',
-  SelLanguage: 'SelLanguage',
-  InviteFriend: 'InviteFriend',
   Group: 'Group',
   Scoreboard: 'Scoreboard',
   Timer: 'Timer',

@@ -1,14 +1,7 @@
 import {useMutation, useQuery} from '@apollo/react-hooks';
 import React, {Fragment, useState} from 'react';
-import {
-  ActivityIndicator,
-  FlatList,
-  SafeAreaView,
-  Text,
-  View,
-} from 'react-native';
+import {ActivityIndicator, FlatList, SafeAreaView, View} from 'react-native';
 import {Button, Header} from 'react-native-elements';
-import {useNavigation} from 'react-navigation-hooks';
 import {SelectLanguageItem} from '../../../components/SelectLanguageItem';
 import {
   EditProfile,
@@ -21,9 +14,9 @@ import edit_profile from '../../../graphql/types/mutations/edit_profile';
 import get_auth_user from '../../../graphql/types/queries/get_auth_user';
 import get_languages from '../../../graphql/types/queries/get_languages';
 import screens from '../../../libs/screens';
+import theme from '../../../libs/theme';
 
-const SelectLanguage = (props: any) => {
-  const {navigate} = useNavigation();
+export const SelectLanguage = (props: any) => {
   const [selectedLanguage, setSelectedLanguage] = useState();
 
   const {data: authUser} = useQuery<GetAuthUser, {}>(get_auth_user);
@@ -43,8 +36,6 @@ const SelectLanguage = (props: any) => {
   const [setInitialScreen] = useMutation(SET_INITIAL_SCREEN);
 
   const setLanguage = async () => {
-    navigate('Home');
-
     try {
       await editProfile({
         variables: {
@@ -75,7 +66,11 @@ const SelectLanguage = (props: any) => {
         containerStyle={{backgroundColor: '#3082ed'}}
         centerComponent={{
           text: 'Select Language',
-          style: {color: 'white', fontSize: 22},
+          style: {
+            color: 'white',
+            fontSize: 22,
+            fontFamily: theme.fonts.QuicksandRegular,
+          },
         }}
       />
 
@@ -101,6 +96,9 @@ const SelectLanguage = (props: any) => {
         <View style={{padding: 10}}>
           <Button
             title="Continue"
+            titleStyle={{
+              fontFamily: theme.fonts.QuicksandRegular,
+            }}
             onPress={setLanguage}
             loading={loading}
             disabled={loading}
@@ -110,5 +108,3 @@ const SelectLanguage = (props: any) => {
     </Fragment>
   );
 };
-
-export default React.memo(SelectLanguage);

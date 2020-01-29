@@ -12,6 +12,6 @@ export const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
     fontSize: 16,
-    fontFamily: theme.fonts.TitilliumWebRegular,
+    fontFamily: theme.fonts.QuicksandBold,
   },
 });
