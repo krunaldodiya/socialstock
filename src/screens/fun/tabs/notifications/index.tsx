@@ -9,6 +9,7 @@ export const Notifications = (props: any) => {
   return (
     <SafeAreaView style={styles.container}>
       <Header {...props} title={'Likes'} camera profile />
+
       <View style={{flex: 1}}>
         <BoxListComponent pic />
         <BoxListComponent follow />

@@ -13,7 +13,7 @@ export const Header = (props: any) => {
       }}
       placement="center"
       statusBarProps={{
-        backgroundColor: '#3082ed',
+        backgroundColor: 'transparent',
         barStyle: 'light-content',
         translucent: true,
       }}
@@ -44,13 +44,6 @@ export const Header = (props: any) => {
         onPress: async () => {
           props.navigation.push(screens.MyProfile);
         },
-      }}
-      containerStyle={{
-        marginTop: 35,
-        marginBottom: 5,
-        marginHorizontal: 10,
-        borderRadius: 10,
-        alignItems: 'flex-start',
       }}
     />
   );

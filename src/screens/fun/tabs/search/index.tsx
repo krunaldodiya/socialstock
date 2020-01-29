@@ -16,7 +16,7 @@ export const Search = (props: any) => {
   const [value, onChangeText] = React.useState('');
 
   return (
-    <SafeAreaView style={{flex: 1, margin: 12}}>
+    <SafeAreaView style={{flex: 1}}>
       <Header {...props} title={'Search'} profile />
 
       <ScrollView style={{marginTop: 12}} showsVerticalScrollIndicator={false}>

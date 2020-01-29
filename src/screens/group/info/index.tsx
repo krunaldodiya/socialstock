@@ -168,6 +168,7 @@ const BoxSquareComponent = (props: any) => {
     </View>
   );
 };
+
 const BoxRedSquareComponent = (props: any) => {
   return (
     <View style={[styles.boxSquare2]}>

@@ -7,7 +7,7 @@ import {images} from '../../libs/images';
 import screens from '../../libs/screens';
 import {styles} from './style';
 
-export const Header = (props: any) => {
+export const HeaderOld = (props: any) => {
   return (
     <SafeAreaView>
       <LinearGradient

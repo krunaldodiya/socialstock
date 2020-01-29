@@ -7,8 +7,9 @@ import {styles} from './style';
 
 export const Feeds = (props: any) => {
   return (
-    <SafeAreaView style={{flex: 1, margin: 12}}>
+    <SafeAreaView style={{flex: 1}}>
       <Header {...props} title={'Feed'} camera profile />
+
       <View style={{flex: 1, marginTop: 16}}>
         <View>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
