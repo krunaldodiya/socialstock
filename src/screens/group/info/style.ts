@@ -55,16 +55,17 @@ export const styles = StyleSheet.create({
   },
   textInput: {
     width: WINDOW_WIDTH - 70,
-    height: 60,
+    height: 30,
     marginTop: 10,
     shadowColor: 'rgba(0, 0, 0, 0.14)',
     shadowOffset: {width: 3, height: 0},
     shadowRadius: 10,
     shadowOpacity: 0.5,
-    borderRadius: 30,
+    borderRadius: 20,
     borderColor: 'rgba(0, 0, 0, 0.14)',
     paddingLeft: 30,
     paddingRight: 20,
+    paddingBottom: 0,
     fontFamily: 'Aileron',
     fontSize: 15,
     fontWeight: '400',
@@ -88,14 +89,14 @@ export const styles = StyleSheet.create({
 },
 boxSquare2: {
     width: WINDOW_WIDTH-80,
-    height: 80,
+    height: 60,
     marginHorizontal: 6,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems:'center',
     paddingLeft: 16,
     paddingRight: 16,
-    marginTop: 20,
+    marginTop: 15,
     
     borderRadius: 8,
     backgroundColor: '#EE9CA8',
@@ -107,8 +108,8 @@ createText: {
     fontWeight: '400',
 },
 avatar2: {
-    width: 30,
-    height: 30,
+    width: 24,
+    height: 24,
     marginHorizontal: 5
 },
 round: {

@@ -107,7 +107,7 @@ const BoxProfileComponent = (props: any) => {
             <Image style={{width: 12, height: 12,}} source={images.plus}></Image>
           </TouchableOpacity>
           <View style={styles.textInfo}>
-            <Text style={{color:'#FFF', fontSize: 24, fontWeight: 'bold'}}>{props.name}</Text>
+            <Text style={{color:'#FFF', fontSize: 16, fontWeight: 'bold'}}>{props.name}</Text>
             <Text style={{color:'#FFF', fontSize: 14, fontWeight: '700'}}>{props.education}</Text>
           </View>
           

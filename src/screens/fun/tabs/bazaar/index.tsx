@@ -1,14 +1,24 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
-import { SafeAreaView, View, Text, ImageBackground, Image} from "react-native";
+import { SafeAreaView, View, Text, ImageBackground, Image, StyleSheet,} from "react-native";
 import {Icon, } from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
 import { Header } from '../../../../../src/components/header';
 import { styles } from './style';
 import { images } from '../../../../../src/libs/images';
+import { TouchableOpacity, TouchableHighlight } from "react-native-gesture-handler";
 
-export const Bazaar = () => {
-  const [dispIndex, setIndex] = useState(0);
+// import Wave from "react-native-waveview";
+
+export class Bazaar extends React.Component {
+
+  constructor(props: any) {
+    super(props);
+    this.state = {
+        dispIndex : 1,
+
+    }
+  }
+  render() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
@@ -16,9 +26,21 @@ export const Bazaar = () => {
         style={styles.backImg}
       >
         <View style={styles.container}>
-          <Header title={'Pauzr'} profile menu/>
+          <Header title={'Pauzr'} profile menu
+            statusBarProps={{
+              barStyle: 'light-content',
+              translucent: true,
+              backgroundColor: '#FFF',
+              height : 20
+            }}
+            barStyle="light-content"
+          >
+            </Header>
           <BoxFlow disp = {1} />
         
+         
+
+
         <View style={{flexDirection:'row', position:'absolute', bottom: '20%',paddingLeft:20, paddingRight:20, height: 120,width:'100%', justifyContent:'space-between'}}>
             <BoxCircleAndPoint count = {10} />
             <BoxCircleAndPoint count = {30}/>
@@ -26,46 +48,27 @@ export const Bazaar = () => {
         </View>
         </View>
       </ImageBackground>
-=======
-import React from 'react';
-import {SafeAreaView, View, Text, ImageBackground} from 'react-native';
-import {Header} from '../../../../../src/components/header';
-import {styles} from './style';
-import {images} from '../../../../../src/libs/images';
-
-export const Bazaar = (props: any) => {
-  return (
-    <SafeAreaView style={{flex: 1}}>
-      <Header {...props} title={'Pauzr'} profile menu />
-
-      <View style={{flex: 1}}>
-        <ImageBackground source={images.back7} style={styles.backImg}>
-          <View style={styles.container}>
-            <View style={{flexDirection: 'row'}}></View>
-          </View>
-        </ImageBackground>
-      </View>
->>>>>>> 29db7e14fbe111b40bf8d9163bb52b9f8373d445
     </SafeAreaView>
   );
+          }
 };
 
 const BoxFlow = (props: any) => {
   return (
     <View style={{ flexDirection: 'row'}}>
-      <View style={props.disp != 0 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 0 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
-      <View style={props.disp != 1 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 1 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
-      <View style={props.disp != 2 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 2 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
-      <View style={props.disp != 3 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 3 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
-      <View style={props.disp != 4 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 4 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
     </View>
@@ -75,7 +78,7 @@ const BoxFlow = (props: any) => {
 const BoxCircleAndPoint = (props: any)=>{
   return (
       <View style={{flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
-        <View style={{flexDirection:'column', width:80, height: 80, borderRadius: 40, justifyContent:'center', alignItems:'center', backgroundColor:'#3C91F1'}}>
+        <TouchableOpacity style={{flexDirection:'column', width:80, height: 80, borderRadius: 40, justifyContent:'center', alignItems:'center', backgroundColor:'#3C91F1'}}>
           <Text style={{color:'#FFF', fontSize:18, fontWeight:'700'}}>{props.count}</Text>
           <View style={{flexDirection:'row'}}>
             <Icon
@@ -87,7 +90,7 @@ const BoxCircleAndPoint = (props: any)=>{
             <Text style={{color:'#FFF', fontSize: 12}}>Minutes</Text>
           </View>
 
-        </View>
+        </TouchableOpacity>
         <LinearGradient
             start={{x: 0, y: 0}}
             end={{x: 1, y: 0}}
@@ -104,3 +107,26 @@ const BoxCircleAndPoint = (props: any)=>{
       </View>
   );
 };
+
+const _styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      marginVertical: 10,
+      marginHorizontal: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderWidth: StyleSheet.hairlineWidth,
+  },
+  wave: {
+      width: 100,
+      aspectRatio: 1,
+      overflow: 'hidden',
+      backgroundColor: 'white',
+  },
+  waveBall: {
+      width: 100,
+      aspectRatio: 1,
+      borderRadius: 50,
+      overflow: 'hidden',
+  }
+});

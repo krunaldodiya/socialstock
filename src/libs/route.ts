@@ -45,11 +45,7 @@ const getStackNavigator = (initialRouteName: string) => {
       Search: {screen: Search},
     },
     {
-<<<<<<< HEAD
-      initialRouteName : 'RequestOtp',
-=======
       initialRouteName,
->>>>>>> 29db7e14fbe111b40bf8d9163bb52b9f8373d445
       headerMode: 'none',
     },
   );
