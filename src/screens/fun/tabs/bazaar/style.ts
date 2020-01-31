@@ -29,5 +29,11 @@ export const styles = StyleSheet.create({
       shadowOffset: { width: 6, height: 0 },
       shadowRadius: 13
     },
+    waveBall: {
+      width: 100,
+      aspectRatio: 1,
+      borderRadius: 50,
+      overflow: 'hidden',
+   }
     
 })

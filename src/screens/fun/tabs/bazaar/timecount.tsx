@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { SafeAreaView, View, Text, ImageBackground, StyleSheet, Image, Dimensions} from "react-native";
 
+import  WaveView from '../../../../components/animation/WaveView';
+
 import {ArtTest} from '../../../../components/animation/Art';
 
 import {Icon, } from 'react-native-elements';
@@ -8,6 +10,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { Header } from '../../../../../src/components/header';
 import { styles } from './style';
 import { images } from '../../../../../src/libs/images';
+
 import {TouchableOpacity} from 'react-native';
 
 var sec = 60;
@@ -71,7 +74,8 @@ export const TimeCount = (props: any) => {
         style = {{backgroundColor:'#3082ed', width:200, height: 200, }}/>
         <Text style={{color:'#31F94D', fontSize:36, fontWeight:'700', marginTop:-70 }}>{timeStr}</Text>
       </View>
-      
+
+
       {!bstop ? <View style={{width:'100%', justifyContent:'center', alignItems:'center',position:'absolute', bottom:40,  }}>
       <ArtTest
         type = {'rectangular'}

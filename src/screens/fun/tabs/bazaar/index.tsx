@@ -22,7 +22,16 @@ export const Bazaar = (props: any) => {
         style={styles.backImg}
       >
         <View style={styles.container}>
-          <Header title={'Pauzr'} profile menu/>
+          <Header title={'Pauzr'} profile menu
+            statusBarProps={{
+              barStyle: 'light-content',
+              translucent: true,
+              backgroundColor: '#FFF',
+              height : 20
+            }}
+            barStyle="light-content"
+          >
+            </Header>
           <BoxFlow disp = {1} />
           
         <View style={{flexDirection:'row', position:'absolute', bottom: '20%',paddingLeft:20, paddingRight:20, height: 120,width:'100%', justifyContent:'space-between'}}>
@@ -42,19 +51,19 @@ export const Bazaar = (props: any) => {
 const BoxFlow = (props: any) => {
   return (
     <View style={{ flexDirection: 'row'}}>
-      <View style={props.disp != 0 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 0 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
-      <View style={props.disp != 1 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 1 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
-      <View style={props.disp != 2 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 2 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
-      <View style={props.disp != 3 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 3 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
-      <View style={props.disp != 4 ? styles.view2: styles.view1} >
+      <View style={props.disp !== 4 ? styles.view2: styles.view1} >
         <View style={{ width:4, height: 4, backgroundColor: '#FFF', borderRadius:2}}></View>
       </View>
     </View>
@@ -102,3 +111,26 @@ const BoxCircleAndPoint = (props: any)=>{
       </View>
   );
 };
+
+const _styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      marginVertical: 10,
+      marginHorizontal: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderWidth: StyleSheet.hairlineWidth,
+  },
+  wave: {
+      width: 100,
+      aspectRatio: 1,
+      overflow: 'hidden',
+      backgroundColor: 'white',
+  },
+  waveBall: {
+      width: 100,
+      aspectRatio: 1,
+      borderRadius: 50,
+      overflow: 'hidden',
+  }
+});

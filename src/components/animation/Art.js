@@ -75,7 +75,6 @@ export class ArtTest extends Component {
   componentWillUnmount() {
     this.intervalTimer && clearTimeout(this.intervalTimer);
     this.moveXTimer && clearTimeout(this.moveXTimer);
-    // this.moveYTimer && clearTimeout(this.moveYTimer);
   }
 
   artDarwRecWaveView() {
