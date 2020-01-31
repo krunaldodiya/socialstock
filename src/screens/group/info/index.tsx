@@ -26,13 +26,12 @@ export const GroupInfo = (props: any) => {
       <View style={styles.container}>
         <View
           style={{
-            height: '80%',
+            height: 434,
             width: '80%',
             backgroundColor: '#FFF',
             // justifyContent: 'center',
             alignItems: 'center',
             borderRadius: 10,
-            marginBottom: 20,
             shadowColor: 'rgba(47, 12, 237, 0.32)',
             shadowOffset: {width: 3, height: 0},
             shadowRadius: 13,
@@ -47,8 +46,9 @@ export const GroupInfo = (props: any) => {
 
           <View style={styles.inputView}>
             <Input
-              inputContainerStyle={styles.textInput}
+              inputContainerStyle={[styles.textInput, ]}
               placeholder="Description"
+              
               leftIconContainerStyle={{marginRight: 10}}
               autoCorrect={false}
               autoCapitalize="none"
@@ -61,7 +61,6 @@ export const GroupInfo = (props: any) => {
               leftIconContainerStyle={{marginRight: 10}}
               autoCorrect={false}
               autoCapitalize="none"
-              secureTextEntry={true}
             />
           </View>
           <View style={{width: WINDOW_WIDTH - 80, height: 20, marginTop: 20}}>
@@ -95,7 +94,7 @@ export const GroupInfo = (props: any) => {
           <Text
             style={{
               color: '#FFF',
-              fontSize: 16,
+              fontSize: 12,
               fontWeight: '500',
               marginLeft: 10,
             }}>
@@ -122,7 +121,7 @@ export const GroupInfo = (props: any) => {
           <Text
             style={{
               color: '#FFF',
-              fontSize: 16,
+              fontSize: 12,
               fontWeight: '500',
               marginLeft: 10,
             }}>
@@ -141,7 +140,7 @@ export const GroupInfo = (props: any) => {
           }}>
           <Image
             source={images.white_plus}
-            style={{width: 20, height: 20}}></Image>
+            style={{width: 16, height: 16}}></Image>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -152,7 +151,7 @@ const BoxSquareComponent = (props: any) => {
   return (
     <View style={styles.boxSquare}>
       <Image source={images.man} style={[styles.avatar2]} />
-      <Text style={{fontWeight: '700', fontSize: 15}}>Roman</Text>
+      <Text style={{fontWeight: '700', fontSize: 15}}></Text>
       <Text style={{fontWeight: '700', fontSize: 14, color: '#999'}}>
         New York
       </Text>
@@ -174,18 +173,18 @@ const BoxRedSquareComponent = (props: any) => {
     <View style={[styles.boxSquare2]}>
       <View
         style={{
-          width: 70,
-          height: 70,
-          borderRadius: 35,
+          width: 50,
+          height: 50,
+          borderRadius: 25,
           backgroundColor: '#FABDC5',
           justifyContent: 'center',
           alignItems: 'center',
         }}>
         <View
           style={{
-            width: 50,
-            height: 50,
-            borderRadius: 25,
+            width: 40,
+            height: 40,
+            borderRadius: 20,
             backgroundColor: '#EE9CA8',
             justifyContent: 'center',
             alignItems: 'center',
@@ -198,7 +197,7 @@ const BoxRedSquareComponent = (props: any) => {
           fontWeight: '700',
           fontSize: 18,
           color: '#FFF',
-          marginLeft: -60,
+          marginLeft: -40,
         }}>
         Invite Friends
       </Text>

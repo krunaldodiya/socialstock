@@ -10,6 +10,7 @@ import {Groups} from '../screens/focus/tabs/groups';
 import {Scoreboard} from '../screens/focus/tabs/scoreboard';
 import {Timer} from '../screens/focus/tabs/timer';
 import {Bazaar} from '../screens/fun/tabs/bazaar';
+import {TimeCount} from '../screens/fun/tabs/bazaar/timecount';
 import {Feeds} from '../screens/fun/tabs/feeds';
 import {Notifications} from '../screens/fun/tabs/notifications';
 import {Search} from '../screens/fun/tabs/search';
@@ -43,13 +44,10 @@ const getStackNavigator = (initialRouteName: string) => {
       Conversation: {screen: Conversation},
       Notifications: {screen: Notifications},
       Search: {screen: Search},
+      TimeCount : {screen: TimeCount},
     },
     {
-<<<<<<< HEAD
-      initialRouteName : 'RequestOtp',
-=======
       initialRouteName,
->>>>>>> 29db7e14fbe111b40bf8d9163bb52b9f8373d445
       headerMode: 'none',
     },
   );

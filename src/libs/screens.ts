@@ -19,6 +19,7 @@ const screens = {
   Feeds: 'Feeds',
   Notifications: 'Notifications',
   Search: 'Search',
+  TimeCount: 'TimeCount',
 };
 
 export default screens;

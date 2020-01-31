@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
-const {width, height} = Dimensions.get('window');
+export const {width, height} = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
     container: {
@@ -29,4 +29,5 @@ export const styles = StyleSheet.create({
       shadowOffset: { width: 6, height: 0 },
       shadowRadius: 13
     },
+    
 })

@@ -48,7 +48,7 @@ const MyProfile = () => {
             <TouchableOpacity>
               <MaterialIcons 
                 name="apps"
-                size = {36}
+                size = {30}
                 color = {'#3082ed'}
               />
             </TouchableOpacity>
@@ -107,8 +107,8 @@ const BoxProfileComponent = (props: any) => {
                 <Image style = {styles.avatar}  source = {images.girl}></Image>
            </View>
           <View style={styles.textInfo}>
-            {props.name && ( <Text style={{color:'#FFF', fontSize: 24, fontWeight: 'bold'}}>{props.name}</Text> )}
-            <Text style={{color:'#FFF', fontSize: 14, fontWeight: '700'}}>{props.education}</Text>
+            {props.name && ( <Text style={{color:'#FFF', fontSize: 16, fontWeight: 'bold'}}>{props.name}</Text> )}
+            <Text style={{color:'#FFF', fontSize: 12, fontWeight: '700'}}>{props.education}</Text>
           </View>
           
         </View>
@@ -128,17 +128,17 @@ const BoxProfileComponent = (props: any) => {
           </View>
           <View style={styles.whitebox}>
             <View style={{marginLeft: 20, justifyContent:'center', alignItems:'center'}}>
-              <Text style = {{fontSize: 24, fontWeight:'bold'}}>{props.post}</Text>
-              <Text style ={{ color: '#D6D6D6', fontSize: 18, fontWeight: '700'}}>Posts</Text>
+              <Text style = {{fontSize: 18, fontWeight:'bold'}}>{props.post}</Text>
+              <Text style ={{ color: '#D6D6D6', fontSize: 14, fontWeight: '700'}}>Posts</Text>
             </View>
             
             <View style={{ justifyContent:'center', alignItems:'center'}}>
-              <Text style = {{fontSize: 24, fontWeight:'bold'}}>{props.followers}</Text>
-              <Text style ={{ color: '#D6D6D6', fontSize: 18, fontWeight: '700'}}>followers</Text>
+              <Text style = {{fontSize: 18, fontWeight:'bold'}}>{props.followers}</Text>
+              <Text style ={{ color: '#D6D6D6', fontSize: 14, fontWeight: '700'}}>followers</Text>
             </View>
             <View style={{marginRight: 20, justifyContent:'center', alignItems:'center'}}>
-              <Text style = {{fontSize: 24, fontWeight:'bold'}}>{props.following}k</Text>
-              <Text style ={{ color: '#D6D6D6', fontSize: 18, fontWeight: '700'}}>following</Text>
+              <Text style = {{fontSize: 18, fontWeight:'bold'}}>{props.following}k</Text>
+              <Text style ={{ color: '#D6D6D6', fontSize: 14, fontWeight: '700'}}>following</Text>
             </View>
           </View>
       </LinearGradient>

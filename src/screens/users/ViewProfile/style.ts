@@ -67,7 +67,7 @@ export const styles = StyleSheet.create({
     },
     button:{
         width: w/2 - 40,
-        height: 40,
+        height: 30,
         justifyContent:'center',
         marginTop: 10,
         marginLeft: 5,
@@ -76,7 +76,7 @@ export const styles = StyleSheet.create({
     editProfile: {
         justifyContent:'center', alignItems:'center',
         width: w/2 - 40,
-        height: 40,
+        height: 30,
         borderWidth: 2,
         borderColor: '#FFF',
         borderRadius: 20,
@@ -87,7 +87,7 @@ export const styles = StyleSheet.create({
         width: w - 60,
         marginLeft: 5,
         marginTop: 12,
-        height : 2*w/10 - 10,
+        height : 2*w/10 - 14,
         flexDirection: 'row',
         backgroundColor: '#FFF',
         borderRadius: 12,

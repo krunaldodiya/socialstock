@@ -75,4 +75,7 @@ export const images = {
   white_plus: require('../../assets/images/white_plus.png'),
   optBack: require('../../assets/images/optBack.png'),
   yellow_circle: require('../../assets/images/yellow_circle.png'),
+
+  ball_gif : require('../../assets/gif/waveball1.gif'),
+  rect_gif : require('../../assets/gif/waverect.gif'),
 };
