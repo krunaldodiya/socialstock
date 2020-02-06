@@ -3,6 +3,8 @@ import { StyleSheet, Dimensions } from 'react-native';
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
+	headerFull : {width: WINDOW_WIDTH,},
+	headerSpace : {width: WINDOW_WIDTH-20, marginLeft: 10, marginTop: 25, height: 50, paddingBottom: 20 },
 	linearGradient: {
 		width: WINDOW_WIDTH - 24,
 		height: 50,

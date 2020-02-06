@@ -21,17 +21,9 @@ export const Bazaar = (props: any) => {
         source={images.back7}
         style={styles.backImg}
       >
+         <Header {...props} title={'Pauzr'} profile menu ></Header>
         <View style={styles.container}>
-          <Header title={'Pauzr'} profile menu
-            statusBarProps={{
-              barStyle: 'light-content',
-              translucent: true,
-              backgroundColor: '#FFF',
-              height : 20
-            }}
-            barStyle="light-content"
-          >
-            </Header>
+         
           <BoxFlow disp = {1} />
           
         <View style={{flexDirection:'row', position:'absolute', bottom: '20%',paddingLeft:20, paddingRight:20, height: 120,width:'100%', justifyContent:'space-between'}}>
@@ -74,7 +66,7 @@ const BoxCircleAndPoint = (props: any)=>{
   return (
       <View style={{flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
         <TouchableOpacity style={{flexDirection:'column', width:80, height: 80, borderRadius: 40, justifyContent:'center', alignItems:'center', backgroundColor:'#3C91F1'}}
-          onPress = {()=>props.nav.navigate('TimeCount', {timecount: props.time})}
+          onPress = {()=>props.nav.navigate('TimeCount', {timecount: props.time, sec : 60})}
           >
           <Text style={{color:'#FFF', fontSize:18, fontWeight:'700'}}>{props.count}</Text>
           <View style={{flexDirection:'row'}}>

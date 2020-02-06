@@ -1,16 +1,16 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
-export const {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      margin: 12,
-      marginTop: 24
+      marginLeft: 10,
+      marginRight: 10,
     },
     backImg: {
         position: 'absolute',
-        top: -12,
+        // top: -12,
         width: width,
         height: height,
     },

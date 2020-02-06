@@ -1,12 +1,17 @@
 import React from 'react';
+import {Dimensions, StyleSheet} from 'react-native';
 import {Header as HeaderBar} from 'react-native-elements';
 import screens from '../../libs/screens';
 import theme from '../../libs/theme';
 import LinearGradient from 'react-native-linear-gradient';
+import {styles} from './style';
+const {width, height} = Dimensions.get('window');
 
 export const Header = (props: any) => {
   return (
     <HeaderBar
+    
+      containerStyle={props.full ? styles.headerFull : styles.headerSpace}
       ViewComponent={LinearGradient}
       linearGradientProps={{
         colors: ['#55c9f2', '#3082ed'],
@@ -29,7 +34,7 @@ export const Header = (props: any) => {
       }}
       centerContainerStyle={{}}
       centerComponent={{
-        text: 'test',
+        text: props.title,
         style: {
           color: '#fff',
           fontSize: 22,

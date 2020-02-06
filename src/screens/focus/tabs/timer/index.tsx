@@ -89,7 +89,7 @@ export const Timer = (props: any) => {
 
   const RenderLayout = () => (
     <Fragment>
-      <Header {...props} title={'Pauzr'} profile menu />
+      <Header {...props} title={'Pauzr'} profile menu full/>
 
       <SafeAreaView style={{flex: 1}}>
         <View style={{flex: 1, backgroundColor: 'skyblue'}}>

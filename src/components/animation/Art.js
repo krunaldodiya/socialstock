@@ -55,7 +55,7 @@ export class ArtTest extends Component {
       } else if (this.copyRadian < 0.3) {
         addBool = true;
       }
-    }, 400);
+    }, 120);
 
     this.moveXTimer = setInterval(() => {//move down
         if( this.total === 0 ) this.total = 1;
@@ -89,11 +89,14 @@ export class ArtTest extends Component {
       var y = 4 * Math.cos(2 * Math.PI * t * this.state.radian) + this.state.moveYRex ;
       linePath.lineTo(x, y)
     }
+
     linePath.lineTo(this.surfaceWidth, 0);
     linePath.lineTo(0, 0);
     linePath.close();
+    
 
     return (
+      <>
     <LinearGradient
             start={{x: 1, y: 0}}
             end={{x: 1, y: 1}}
@@ -103,21 +106,28 @@ export class ArtTest extends Component {
                 <ART.Shape d={linePath} stroke="white" strokeWidth={2} fill={"white"} />
             </ART.Surface>
     </LinearGradient>
+    </>
     )
   }
 
   artDarwCircularWaveView() {
     var moveX = 0;
     var t1 = moveX / 50.0;
-    var moveY = 4 * Math.cos(2 * Math.PI * t1 * this.state.radian) + this.state.moveY;
+    // var moveY = 4 * Math.sin(2 * Math.PI * t1 * this.state.radian) + this.state.moveY;
+    var moveY = 10 * t1*t1*this.state.radian + this.state.moveY;
     const waveLinePath = ART.Path();
     waveLinePath.moveTo(moveX, moveY);
+    console.log(this.state.radian);
     for (var x = 0; x <= this.surfaceWidth; x++) {
-      var t = x / 50.0;
-      var y = 4 * Math.cos(2 * Math.PI * t * this.state.radian) + this.state.moveY;
+      var xx = this.surfaceWidth/2
+      var t = (xx-x) / 50.0;
+      // var y = 10 * Math.sin( Math.PI * t * this.state.radian*2) + this.state.moveY ;
+      var y =-100*(t*t)*this.state.radian+ this.state.moveY ;
     //   console.log(y)
       waveLinePath.lineTo(x, y)
     }
+
+
     waveLinePath.lineTo(this.surfaceWidth, 0);
     waveLinePath.lineTo(0, 0);
     waveLinePath.close();
@@ -156,9 +166,9 @@ export class ArtTest extends Component {
         <ART.Shape d={waveLinePath} stroke={this.props.stroke} strokeWidth={this.props.strokeWidth} fill={this.props.fill} />
       </ART.Surface>
 
-      <ART.Surface width={this.surfaceWidth} height={this.surfaceHeigth} style={{ backgroundColor: 'rgba(0,0,0,0.0)', position: 'absolute', left: 0, top: 0, width: this.surfaceWidth, height: this.surfaceWidth }}>
+      {/* <ART.Surface width={this.surfaceWidth} height={this.surfaceHeigth} style={{ backgroundColor: 'rgba(0,0,0,0.0)', position: 'absolute', left: 0, top: 0, width: this.surfaceWidth, height: this.surfaceWidth }}>
         <ART.Shape d={linePath} stroke="rgba(0,0,0,0.0)" fill={this.props.superViewBackgroundColor} />
-      </ART.Surface>
+      </ART.Surface> */}
     </LinearGradient>
   }
 
